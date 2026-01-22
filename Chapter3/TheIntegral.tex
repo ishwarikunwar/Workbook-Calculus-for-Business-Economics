@@ -1,0 +1,1565 @@
+\chapter{The Integral}
+\section{The Definite Integral}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Explain the meaning of the definite integral as an accumulation process.
+  \item Interpret definite integrals in business and economic contexts.
+  \item Understand the role of partitions and sums in defining an integral.
+  \item Use definite-integral notation correctly.
+  \item Distinguish between signed area and total accumulation.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Definite Integral.}  
+The definite integral of a function $f(x)$ from $a$ to $b$ is a number that represents the total accumulation of the values of $f(x)$ over the interval $[a,b]$. It is denoted by
+\[
+\int_a^b f(x)\,dx.
+\]
+
+In business and economics, definite integrals often represent total cost, total revenue, total profit, or total change over a given interval.
+
+\medskip
+
+\textbf{Partition of an Interval.}  
+A partition of $[a,b]$ divides the interval into $n$ subintervals:
+\[
+a=x_0<x_1<x_2<\cdots<x_n=b.
+\]
+Each subinterval has width $\Delta x$.
+
+\medskip
+
+\textbf{Riemann Sum.}  
+A Riemann sum approximates the definite integral by summing function values multiplied by subinterval widths:
+\[
+\sum_{i=1}^n f(x_i^*)\,\Delta x,
+\]
+where $x_i^*$ is a sample point in the $i$th subinterval.
+
+\medskip
+
+\textbf{Limit of Riemann Sums.}  
+The definite integral is defined as the limit of Riemann sums as the number of subintervals increases:
+\[
+\int_a^b f(x)\,dx
+=
+\lim_{n\to\infty}
+\sum_{i=1}^n f(x_i^*)\,\Delta x.
+\]
+
+\medskip
+
+\textbf{Signed Area.}  
+If $f(x)$ is positive on an interval, the definite integral is positive.  
+If $f(x)$ is negative, the definite integral is negative.  
+Thus, the definite integral represents \emph{net accumulation}, not just geometric area.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Interpreting a Definite Integral}
+
+\textbf{Problem.}  
+Suppose $C'(x)$ represents the marginal cost (in dollars per unit) of producing $x$ units of a product. Explain the meaning of
+\[
+\int_{20}^{50} C'(x)\,dx.
+\]
+
+\textbf{Solution.}
+
+The definite integral represents the total change in cost as production increases from 20 units to 50 units.
+
+\textbf{Interpretation.}  
+$\displaystyle \int_{20}^{50} C'(x)\,dx$ is the total additional cost incurred when production increases from 20 to 50 units.
+
+\medskip
+
+\textbf{Example 2: Accumulation of Revenue}
+
+\textbf{Problem.}  
+Let $R'(x)$ denote marginal revenue (in dollars per unit). What does
+\[
+\int_{0}^{100} R'(x)\,dx
+\]
+represent?
+
+\textbf{Solution.}
+
+This definite integral measures the accumulated revenue generated from selling the first 100 units.
+
+\textbf{Interpretation.}  
+The integral gives the total revenue earned from unit 0 through unit 100.
+
+\medskip
+
+\textbf{Example 3: Signed Area and Net Change}
+
+\textbf{Problem.}  
+Suppose $f(x)$ represents net cash flow (in dollars per day), where positive values indicate profit and negative values indicate loss. Interpret
+\[
+\int_{0}^{30} f(x)\,dx.
+\]
+
+\textbf{Solution.}
+
+The integral represents the net cash flow over 30 days, accounting for both profits and losses.
+
+\textbf{Interpretation.}  
+Positive portions add to the total, while negative portions subtract, giving the overall net result.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Let $P'(x)$ represent marginal profit (in dollars per unit).
+  \begin{enumerate}
+    \item Explain the meaning of $\displaystyle \int_{10}^{40} P'(x)\,dx$.
+    \workbox[1.6in]{}
+    \item What does a negative value of this integral indicate?
+    \workbox[1.6in]{}
+  \end{enumerate}
+
+  \item Suppose $C'(x)$ is marginal cost.
+  \begin{enumerate}
+    \item Interpret $\displaystyle \int_{a}^{b} C'(x)\,dx$ in words.
+    \workbox[1.6in]{}
+    \item How does this relate to total cost?
+    \workbox[1.6in]{}
+  \end{enumerate}
+
+  \item A function $f(x)$ represents the rate of change of inventory (units per week).
+  \begin{enumerate}
+    \item Explain the meaning of $\displaystyle \int_{0}^{8} f(x)\,dx$.
+    \workbox[1.8in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{The Definite Integral, Practice Problems.}
+  \begin{enumerate}
+    \item
+    \begin{enumerate}
+      \item The total change in profit as production increases from 10 to 40 units.
+      \item A negative value indicates an overall loss in profit over that interval.
+    \end{enumerate}
+
+    \item
+    \begin{enumerate}
+      \item The total change in cost from $x=a$ to $x=b$.
+      \item It represents the accumulated cost over that interval.
+    \end{enumerate}
+
+    \item The net change in inventory over 8 weeks.
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item The definite integral measures total accumulation over an interval.
+  \item It is defined as the limit of Riemann sums.
+  \item Definite integrals represent net change, not just geometric area.
+  \item In business, integrals model total cost, revenue, profit, and inventory change.
+  \item Understanding accumulation prepares for the Fundamental Theorem of Calculus.
+\end{itemize}
+
+
+\newpage
+
+\section{The Fundamental Theorem of Calculus and Antidifferentiation}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item State and explain the Fundamental Theorem of Calculus.
+  \item Evaluate definite integrals using antiderivatives.
+  \item Understand the relationship between differentiation and integration.
+  \item Apply the Fundamental Theorem of Calculus in business contexts.
+  \item Interpret definite integrals as net change.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Antiderivative.}  
+A function $F(x)$ is an antiderivative of $f(x)$ if
+\[
+F'(x)=f(x).
+\]
+The collection of all antiderivatives of $f(x)$ is denoted by
+\[
+\int f(x)\,dx = F(x) + C,
+\]
+where $C$ is a constant.
+
+\medskip
+
+\textbf{Fundamental Theorem of Calculus (FTC).}  
+If $f(x)$ is continuous on $[a,b]$ and $F(x)$ is any antiderivative of $f(x)$, then
+\[
+\int_a^b f(x)\,dx = F(b) - F(a).
+\]
+
+\medskip
+
+\textbf{Interpretation.}  
+The Fundamental Theorem of Calculus shows that differentiation and integration are inverse processes. It allows us to compute accumulated change using antiderivatives.
+
+\medskip
+
+\textbf{Business Interpretation.}  
+If $f(x)$ represents a marginal quantity (such as marginal cost or marginal revenue), then the definite integral gives the total change over an interval.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Evaluating a Definite Integral Using FTC}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int_{2}^{5} (3x^2 - 4x + 1)\,dx.
+\]
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Find an antiderivative:
+\[
+F(x)=x^3 - 2x^2 + x.
+\]
+
+\textbf{Step 2.} Apply the Fundamental Theorem of Calculus:
+\[
+\int_{2}^{5} (3x^2 - 4x + 1)\,dx
+= F(5) - F(2).
+\]
+
+\textbf{Step 3.} Evaluate:
+\[
+F(5)=125-50+5=80,
+\quad
+F(2)=8-8+2=2.
+\]
+
+\textbf{Conclusion.}
+\[
+\int_{2}^{5} (3x^2 - 4x + 1)\,dx = 78.
+\]
+
+\medskip
+
+\textbf{Example 2: Total Cost from Marginal Cost}
+
+\textbf{Problem.}  
+Suppose marginal cost (in dollars per unit) is given by
+\[
+C'(x)=4x+20.
+\]
+Find the increase in total cost when production increases from 10 units to 25 units.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Integrate marginal cost:
+\[
+\int_{10}^{25} (4x+20)\,dx.
+\]
+
+\textbf{Step 2.} Find an antiderivative:
+\[
+F(x)=2x^2+20x.
+\]
+
+\textbf{Step 3.} Apply FTC:
+\[
+F(25)-F(10)
+= \bigl(2(25)^2+20(25)\bigr)
+- \bigl(2(10)^2+20(10)\bigr).
+\]
+
+\textbf{Step 4.} Evaluate:
+\[
+(1250+500)-(200+200)=1750-400=1350.
+\]
+
+\textbf{Interpretation.}  
+The total cost increases by \$1,350 when production increases from 10 to 25 units.
+
+\medskip
+
+\textbf{Example 3: Net Change in Revenue}
+
+\textbf{Problem.}  
+Marginal revenue is given by
+\[
+R'(x)=60-3x.
+\]
+Find the change in revenue from selling 5 units to selling 15 units.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Set up the integral:
+\[
+\int_{5}^{15} (60-3x)\,dx.
+\]
+
+\textbf{Step 2.} Find an antiderivative:
+\[
+F(x)=60x-\frac{3}{2}x^2.
+\]
+
+\textbf{Step 3.} Apply FTC:
+\[
+F(15)-F(5).
+\]
+
+\textbf{Step 4.} Evaluate:
+\[
+\bigl(900-337.5\bigr)-\bigl(300-37.5\bigr)
+=562.5-262.5=300.
+\]
+
+\textbf{Interpretation.}  
+Revenue increases by \$300 when sales increase from 5 to 15 units.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Evaluate the definite integral:
+  \[
+  \int_{1}^{4} (2x^2 - x)\,dx.
+  \]
+  \workbox[2.0in]{}
+
+  \item Marginal cost is given by
+  \[
+  C'(x)=6x+10.
+  \]
+  Find the increase in total cost when production increases from 5 to 20 units.
+  \workbox[2.2in]{}
+
+  \item Marginal profit is given by
+  \[
+  P'(x)=50-2x.
+  \]
+  Find the change in profit when sales increase from 10 units to 30 units.
+  \workbox[2.2in]{}
+
+  \begin{answer}
+  \textbf{FTC and Antidifferentiation, Practice Problems.}
+  \begin{enumerate}
+    \item $\displaystyle \int_{1}^{4} (2x^2 - x)\,dx = 30$.
+    \item $\displaystyle \int_{5}^{20} (6x+10)\,dx = 1725$.
+    \item $\displaystyle \int_{10}^{30} (50-2x)\,dx = 600$.
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Antiderivatives reverse differentiation.
+  \item The Fundamental Theorem of Calculus links derivatives and integrals.
+  \item FTC allows efficient computation of definite integrals.
+  \item In business, marginal functions integrate to total change.
+  \item FTC is foundational for all applied integration techniques.
+\end{itemize}
+
+
+\newpage
+
+\section{Antiderivatives of Formulas}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Use basic antiderivative rules to evaluate indefinite integrals.
+  \item Apply the constant multiple and sum rules correctly.
+  \item Use the power rule for antiderivatives.
+  \item Integrate exponential and logarithmic functions.
+  \item Include the constant of integration in all indefinite integrals.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Indefinite Integral.}  
+An indefinite integral represents the family of all antiderivatives of a function and is written as
+\[
+\int f(x)\,dx = F(x) + C,
+\]
+where $C$ is an arbitrary constant.
+
+\medskip
+
+\textbf{Antiderivative Rules (Building Blocks).}
+
+Let $f$ and $g$ be functions of $x$, and let $k$ and $n$ be constants.
+
+\medskip
+
+\textbf{Constant Multiple Rule.}
+\[
+\int k f(x)\,dx = k \int f(x)\,dx.
+\]
+
+\medskip
+
+\textbf{Sum and Difference Rule.}
+\[
+\int \bigl(f(x)\pm g(x)\bigr)\,dx
+=
+\int f(x)\,dx \pm \int g(x)\,dx.
+\]
+
+\medskip
+
+\textbf{Power Rule.}
+For $n\neq -1$,
+\[
+\int x^n\,dx=\frac{x^{n+1}}{n+1}+C.
+\]
+
+\medskip
+
+\textbf{Special Case: Constant Function.}
+\[
+\int k\,dx=kx+C.
+\]
+
+\medskip
+
+\textbf{Exponential Functions.}
+\[
+\int e^x\,dx=e^x+C,
+\qquad
+\int a^x\,dx=\frac{a^x}{\ln a}+C \quad (a>0,\ a\neq1).
+\]
+
+\medskip
+
+\textbf{Natural Logarithm.}
+\[
+\int \frac{1}{x}\,dx=\ln|x|+C.
+\]
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Using the Power Rule}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int (4x^3-6x+5)\,dx.
+\]
+
+\textbf{Solution.}
+
+Apply the sum rule and power rule:
+\[
+\int 4x^3\,dx= x^4,
+\quad
+\int -6x\,dx=-3x^2,
+\quad
+\int 5\,dx=5x.
+\]
+
+\textbf{Final Answer.}
+\[
+x^4-3x^2+5x+C.
+\]
+
+\medskip
+
+\textbf{Example 2: Exponential Functions}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int \bigl(3e^x+2\cdot5^x\bigr)\,dx.
+\]
+
+\textbf{Solution.}
+
+Apply the constant multiple and exponential rules:
+\[
+\int 3e^x\,dx=3e^x,
+\qquad
+\int 2\cdot5^x\,dx=\frac{2\cdot5^x}{\ln 5}.
+\]
+
+\textbf{Final Answer.}
+\[
+3e^x+\frac{2\cdot5^x}{\ln 5}+C.
+\]
+
+\medskip
+
+\textbf{Example 3: Logarithmic Antiderivative}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int \frac{7}{x}\,dx.
+\]
+
+\textbf{Solution.}
+
+Use the constant multiple rule:
+\[
+\int \frac{7}{x}\,dx=7\ln|x|+C.
+\]
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Evaluate:
+  \[
+  \int (6x^2-4x+9)\,dx.
+  \]
+  \workbox[2.2in]{}
+
+  \item Evaluate:
+  \[
+  \int (2e^x-3\cdot4^x)\,dx.
+  \]
+  \workbox[2.2in]{}
+
+  \item Evaluate:
+  \[
+  \int \frac{5}{x}\,dx.
+  \]
+  \workbox[1.8in]{}
+
+  \item Evaluate:
+  \[
+  \int (x^{-3}+2x^{1/2})\,dx.
+  \]
+  \workbox[2.4in]{}
+
+  \begin{answer}
+  \textbf{Antiderivatives of Formulas, Practice Problems.}
+  \begin{enumerate}
+    \item $2x^3-2x^2+9x+C$.
+    \item $2e^x-\dfrac{3\cdot4^x}{\ln4}+C$.
+    \item $5\ln|x|+C$.
+    \item $-\dfrac{1}{2}x^{-2}+\dfrac{4}{3}x^{3/2}+C$.
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Antiderivative rules allow efficient computation of indefinite integrals.
+  \item The power rule applies to most algebraic functions.
+  \item Exponential and logarithmic functions have special antiderivative formulas.
+  \item The constant of integration represents a family of functions.
+  \item These rules form the foundation for all integration techniques.
+\end{itemize}
+
+
+\newpage
+
+\section{Substitution}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Recognize integrals that require substitution.
+  \item Apply substitution to evaluate indefinite integrals.
+  \item Correctly change variables and differentials.
+  \item Reverse the chain rule through integration.
+  \item Use substitution in simple business and economic models.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Substitution Method.}  
+Substitution is a technique for evaluating integrals by changing variables to simplify the integrand. It is based on reversing the chain rule for differentiation.
+
+\medskip
+
+\textbf{Basic Idea.}  
+If an integrand contains a function and its derivative (or something close to it), substitution may simplify the integral.
+
+\medskip
+
+\textbf{Procedure for Substitution.}
+\begin{enumerate}
+  \item Choose a substitution $u=g(x)$.
+  \item Compute $du=g'(x)\,dx$.
+  \item Rewrite the integral entirely in terms of $u$.
+  \item Integrate with respect to $u$.
+  \item Substitute back in terms of $x$.
+\end{enumerate}
+
+\medskip
+
+\textbf{Why Substitution Works.}  
+Substitution reverses the chain rule:
+\[
+\frac{d}{dx}F(g(x)) = F'(g(x))g'(x).
+\]
+Integration undoes this process.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Basic Substitution}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int 2x(3x^2+1)^4\,dx.
+\]
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Let $u=3x^2+1$.
+
+\textbf{Step 2.} Compute $du=6x\,dx$, so $\frac{1}{3}du=2x\,dx$.
+
+\textbf{Step 3.} Rewrite the integral:
+\[
+\int (3x^2+1)^4(2x\,dx)
+=
+\frac{1}{3}\int u^4\,du.
+\]
+
+\textbf{Step 4.} Integrate:
+\[
+\frac{1}{3}\cdot\frac{u^5}{5}+C=\frac{u^5}{15}+C.
+\]
+
+\textbf{Step 5.} Substitute back:
+\[
+\frac{(3x^2+1)^5}{15}+C.
+\]
+
+\medskip
+
+\textbf{Example 2: Exponential Function}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int e^{5x-2}\,dx.
+\]
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Let $u=5x-2$.
+
+\textbf{Step 2.} Then $du=5\,dx$, so $\frac{1}{5}du=dx$.
+
+\textbf{Step 3.} Rewrite and integrate:
+\[
+\frac{1}{5}\int e^u\,du=\frac{1}{5}e^u+C.
+\]
+
+\textbf{Final Answer.}
+\[
+\frac{1}{5}e^{5x-2}+C.
+\]
+
+\medskip
+
+\textbf{Example 3: Logarithmic Form}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int \frac{4x}{x^2+9}\,dx.
+\]
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Let $u=x^2+9$.
+
+\textbf{Step 2.} Then $du=2x\,dx$, so $2\,du=4x\,dx$.
+
+\textbf{Step 3.} Rewrite and integrate:
+\[
+\int \frac{4x}{x^2+9}\,dx
+=
+2\int \frac{1}{u}\,du
+=
+2\ln|u|+C.
+\]
+
+\textbf{Final Answer.}
+\[
+2\ln(x^2+9)+C.
+\]
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Evaluate:
+  \[
+  \int x(2x^2+5)^3\,dx.
+  \]
+  \workbox[2.6in]{}
+
+  \item Evaluate:
+  \[
+  \int e^{4x+1}\,dx.
+  \]
+  \workbox[2.0in]{}
+
+  \item Evaluate:
+  \[
+  \int \frac{6x}{x^2+4}\,dx.
+  \]
+  \workbox[2.2in]{}
+
+  \begin{answer}
+  \textbf{Substitution, Practice Problems.}
+  \begin{enumerate}
+    \item $\dfrac{(2x^2+5)^4}{8}+C.$
+    \item $\dfrac{1}{4}e^{4x+1}+C.$
+    \item $3\ln(x^2+4)+C.$
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Substitution simplifies integrals by changing variables.
+  \item It reverses the chain rule for differentiation.
+  \item Successful substitution identifies a function and its derivative.
+  \item Algebraic substitution prepares for applied integration problems.
+  \item Substitution is a core technique for evaluating complex integrals.
+\end{itemize}
+
+
+\newpage
+
+\section{Additional Integration Techniques}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Apply integration by parts to evaluate integrals of products.
+  \item Choose appropriate functions for $u$ and $dv$.
+  \item Use the integration by parts formula for indefinite integrals.
+  \item Recognize integrals that match standard integral formulas.
+  \item Evaluate selected algebraic integrals using known results.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Integration by Parts.}  
+Integration by parts is a technique used to evaluate integrals of products of functions. It is based on the product rule for differentiation.
+
+\medskip
+
+\textbf{Formula for Integration by Parts.}
+If $u=u(x)$ and $v=v(x)$ are differentiable functions, then
+\[
+\int u\,dv = uv - \int v\,du.
+\]
+
+\medskip
+
+\textbf{Choosing $u$ and $dv$.}  
+The goal is to choose $u$ so that its derivative $du$ is simpler than $u$, while $dv$ is easy to integrate.
+
+\medskip
+
+\textbf{Definite Integrals.}  
+For definite integrals, integration by parts becomes
+\[
+\int_a^b u\,dv = \left.uv\right|_a^b - \int_a^b v\,du.
+\]
+
+\medskip
+
+\textbf{Standard Integral Forms.}  
+Some integrals occur frequently and have known formulas, such as:
+\[
+\int \frac{1}{x^2-a^2}\,dx=\frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C,
+\]
+\[
+\int \frac{1}{\sqrt{x^2+a^2}}\,dx=\ln\left|x+\sqrt{x^2+a^2}\right|+C.
+\]
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Integration by Parts}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int x\ln x\,dx.
+\]
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Choose
+\[
+u=\ln x \quad\Rightarrow\quad du=\frac{1}{x}\,dx,
+\]
+\[
+dv=x\,dx \quad\Rightarrow\quad v=\frac{x^2}{2}.
+\]
+
+\textbf{Step 2.} Apply the formula:
+\[
+\int x\ln x\,dx
+=
+\frac{x^2}{2}\ln x-\int \frac{x^2}{2}\cdot\frac{1}{x}\,dx.
+\]
+
+\textbf{Step 3.} Simplify and integrate:
+\[
+\frac{x^2}{2}\ln x-\frac{1}{2}\int x\,dx
+=
+\frac{x^2}{2}\ln x-\frac{x^2}{4}+C.
+\]
+
+\medskip
+
+\textbf{Example 2: Definite Integral Using Integration by Parts}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int_1^e \ln x\,dx.
+\]
+
+\textbf{Solution.}
+
+Let $u=\ln x$ and $dv=dx$. Then $du=\frac{1}{x}dx$ and $v=x$.
+
+\[
+\int_1^e \ln x\,dx
+=
+\left.x\ln x\right|_1^e-\int_1^e 1\,dx.
+\]
+
+\[
+= (e\cdot1-0)-(e-1)=1.
+\]
+
+\textbf{Conclusion.}
+\[
+\int_1^e \ln x\,dx=1.
+\]
+
+\medskip
+
+\textbf{Example 3: Using a Standard Integral Formula}
+
+\textbf{Problem.}  
+Evaluate
+\[
+\int \frac{1}{x^2-9}\,dx.
+\]
+
+\textbf{Solution.}
+
+This matches the standard form with $a=3$:
+\[
+\int \frac{1}{x^2-9}\,dx
+=
+\frac{1}{6}\ln\left|\frac{x-3}{x+3}\right|+C.
+\]
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Evaluate:
+  \[
+  \int x\ln x\,dx.
+  \]
+  \workbox[2.8in]{}
+
+  \item Evaluate:
+  \[
+  \int_1^e \ln x\,dx.
+  \]
+  \workbox[2.0in]{}
+
+  \item Evaluate:
+  \[
+  \int \frac{1}{x^2-16}\,dx.
+  \]
+  \workbox[2.2in]{}
+
+  \begin{answer}
+  \textbf{Additional Integration Techniques, Practice Problems.}
+  \begin{enumerate}
+    \item $\dfrac{x^2}{2}\ln x-\dfrac{x^2}{4}+C.$
+    \item $1.$
+    \item $\dfrac{1}{8}\ln\left|\dfrac{x-4}{x+4}\right|+C.$
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Integration by parts evaluates integrals of products.
+  \item It is based on reversing the product rule.
+  \item Choosing $u$ appropriately simplifies the problem.
+  \item Some integrals follow known algebraic formulas.
+  \item These techniques extend the range of integrals we can evaluate.
+\end{itemize}
+
+
+\newpage
+
+\section{Area, Volume, and Average Value}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Compute the area under a curve using definite integrals.
+  \item Find the area between two curves.
+  \item Compute volumes of solids formed by rotating a region about the $x$-axis.
+  \item Find the average value of a function on an interval.
+  \item Interpret area, volume, and average value in applied contexts.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Area Under a Curve.}  
+If $f(x)\ge 0$ on $[a,b]$, the area between the graph of $f(x)$ and the $x$-axis is
+\[
+\text{Area}=\int_a^b f(x)\,dx.
+\]
+
+\medskip
+
+\textbf{Area Between Two Curves.}  
+If $f(x)\ge g(x)$ on $[a,b]$, then the area between the curves is
+\[
+\text{Area}=\int_a^b \bigl(f(x)-g(x)\bigr)\,dx.
+\]
+
+\medskip
+
+\textbf{Volume of a Solid of Revolution.}  
+Consider the region bounded by the graph of $f(x)$, the $x$-axis, and the vertical lines $x=a$ and $x=b$, where $f(x)\ge0$ on $[a,b]$.
+
+If this region is rotated about the $x$-axis, it forms a three-dimensional solid.
+
+\medskip
+
+Partition the interval $[a,b]$ into subintervals of width $\Delta x$. Each subinterval generates a thin cylindrical disk with:
+\begin{itemize}
+  \item radius $f(x)$,
+  \item height $\Delta x$.
+\end{itemize}
+
+The volume of one disk is approximately
+\[
+\pi\bigl(f(x)\bigr)^2\Delta x.
+\]
+
+Adding the volumes of all disks gives a Riemann sum:
+\[
+\sum \pi\bigl(f(x)\bigr)^2\Delta x.
+\]
+
+Taking the limit as $\Delta x\to0$ yields the exact volume.
+
+\medskip
+
+\textbf{Disk Method Formula.}
+\[
+V=\int_a^b \pi\bigl(f(x)\bigr)^2\,dx.
+\]
+
+\medskip
+
+\textbf{Average Value of a Function.}  
+The average value of $f(x)$ on $[a,b]$ is
+\[
+f_{\text{avg}}=\frac{1}{b-a}\int_a^b f(x)\,dx.
+\]
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Area Under a Curve}
+
+\textbf{Problem.}  
+Find the area under the curve $f(x)=2x$ from $x=0$ to $x=5$.
+
+\textbf{Solution.}
+
+\[
+\text{Area}=\int_0^5 2x\,dx
+=\left[x^2\right]_0^5
+=25.
+\]
+
+\medskip
+
+\textbf{Example 2: Area Between Two Curves}
+
+\textbf{Problem.}  
+Find the area between $f(x)=x$ and $g(x)=x^2$ on $[0,1]$.
+
+\textbf{Solution.}
+
+Since $x\ge x^2$ on $[0,1]$,
+\[
+\text{Area}=\int_0^1 (x-x^2)\,dx
+=\left[\frac{x^2}{2}-\frac{x^3}{3}\right]_0^1
+=\frac{1}{6}.
+\]
+
+\medskip
+
+\textbf{Example 3: Volume Using the Disk Method}
+
+\textbf{Problem.}  
+Find the volume of the solid obtained by rotating $f(x)=x$ about the $x$-axis on $[0,2]$.
+
+\textbf{Solution.}
+
+Using the disk method,
+\[
+V=\int_0^2 \pi x^2\,dx
+=\pi\left[\frac{x^3}{3}\right]_0^2
+=\frac{8\pi}{3}.
+\]
+
+\medskip
+
+\textbf{Example 4: Average Value}
+
+\textbf{Problem.}  
+Find the average value of $f(x)=3x^2$ on $[0,2]$.
+
+\textbf{Solution.}
+
+\[
+f_{\text{avg}}
+=\frac{1}{2-0}\int_0^2 3x^2\,dx
+=\frac{1}{2}\left[x^3\right]_0^2
+=4.
+\]
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Find the area under $f(x)=4x$ from $x=0$ to $x=3$.
+  \workbox[2.2in]{}
+
+  \item Find the area between $f(x)=2x$ and $g(x)=x^2$ on $[0,2]$.
+  \workbox[2.6in]{}
+
+  \item Find the volume of the solid obtained by rotating $f(x)=x^2$ about the $x$-axis on $[0,1]$.
+  \workbox[2.8in]{}
+
+  \item Find the average value of $f(x)=x^2+2$ on $[1,3]$.
+  \workbox[2.4in]{}
+
+  \begin{answer}
+  \textbf{Area, Volume, and Average Value, Practice Problems.}
+  \begin{enumerate}
+    \item $18.$
+    \item $\dfrac{4}{3}.$
+    \item $\dfrac{\pi}{5}.$
+    \item $\dfrac{13}{3}.$
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Definite integrals compute areas and accumulated quantities.
+  \item Area between curves is found by integrating the difference.
+  \item Volumes of solids of revolution are computed using the disk method.
+  \item Average value represents the mean value of a function on an interval.
+  \item These concepts have broad applications in business and economics.
+\end{itemize}
+
+
+\newpage
+
+\section{Applications to Business}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Identify demand and supply functions.
+  \item Determine equilibrium price and quantity.
+  \item Compute consumer and producer surplus using definite integrals.
+  \item Interpret surplus values as gains from trade.
+  \item Compute the present value of a continuous income stream.
+  \item Compare investments using present value.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Demand and Supply.}  
+A demand function $p=d(q)$ gives the price consumers are willing to pay for a given quantity $q$ and is typically decreasing.
+
+A supply function $p=s(q)$ gives the price producers are willing to accept for a given quantity $q$ and is typically increasing.
+
+\medskip
+
+\textbf{Equilibrium.}  
+The equilibrium point $(q^*,p^*)$ occurs where demand equals supply:
+\[
+d(q^*)=s(q^*)=p^*.
+\]
+
+\medskip
+
+\textbf{Consumer Surplus.}  
+Consumer surplus is the total benefit consumers receive by paying less than the maximum price they are willing to pay.
+
+\medskip
+
+\textbf{Producer Surplus.}  
+Producer surplus is the total benefit producers receive by selling at a price higher than the minimum price they are willing to accept.
+
+\medskip
+
+\textbf{Surplus Formulas.}  
+Given demand $p=d(q)$, supply $p=s(q)$, and equilibrium $(q^*,p^*)$:
+\[
+\text{Consumer Surplus}=\int_0^{q^*} d(q)\,dq - p^*q^*,
+\]
+\[
+\text{Producer Surplus}=p^*q^*-\int_0^{q^*} s(q)\,dq.
+\]
+
+The sum of consumer and producer surplus represents the \textbf{total gains from trade}.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Finding Equilibrium}
+
+\textbf{Problem.}  
+Suppose demand and supply are given by
+\[
+d(q)=100-2q,
+\qquad
+s(q)=20+q.
+\]
+Find the equilibrium price and quantity.
+
+\textbf{Solution.}
+
+Set demand equal to supply:
+\[
+100-2q=20+q.
+\]
+
+Solving,
+\[
+3q=80 \quad \Rightarrow \quad q^*=\frac{80}{3}.
+\]
+
+Substitute into either function:
+\[
+p^*=100-2\left(\frac{80}{3}\right)=\frac{140}{3}.
+\]
+
+\medskip
+
+\textbf{Example 2: Consumer Surplus}
+
+\textbf{Problem.}  
+Using the functions from Example 1, find the consumer surplus.
+
+\textbf{Solution.}
+
+\[
+\text{CS}
+=
+\int_0^{80/3} (100-2q)\,dq - \frac{140}{3}\cdot\frac{80}{3}.
+\]
+
+\[
+=
+\left[100q-q^2\right]_0^{80/3}-\frac{11200}{9}
+=
+\frac{17600}{9}-\frac{11200}{9}
+=
+\frac{6400}{9}.
+\]
+
+\medskip
+
+\textbf{Example 3: Producer Surplus}
+
+\textbf{Problem.}  
+Using the same functions, find the producer surplus.
+
+\textbf{Solution.}
+
+\[
+\text{PS}
+=
+\frac{140}{3}\cdot\frac{80}{3}-\int_0^{80/3}(20+q)\,dq.
+\]
+
+\[
+=
+\frac{11200}{9}-\left[20q+\frac{q^2}{2}\right]_0^{80/3}
+=
+\frac{11200}{9}-\frac{8000}{9}
+=
+\frac{3200}{9}.
+\]
+
+\subsection*{Continuous Income Stream}
+
+\textbf{Compound Interest Review.}  
+Let $P$ be the principal, $r$ the annual interest rate, and $t$ the time in years.
+
+\begin{itemize}
+  \item Compounded $n$ times per year:
+  \[
+  A(t)=P\left(1+\frac{r}{n}\right)^{nt}.
+  \]
+  \item Compounded continuously:
+  \[
+  A(t)=Pe^{rt}.
+  \]
+\end{itemize}
+
+\medskip
+
+\textbf{Continuous Income Stream.}  
+Suppose money earns interest at an annual rate $r$, compounded continuously. Let $F(t)$ be a continuous income function (in dollars per year) received between time $0$ and time $T$.
+
+Each small payment must be discounted back to the present using the exponential factor.
+
+\medskip
+
+\textbf{Present Value Formula.}
+\[
+\text{PV}=\int_0^T F(t)e^{-rt}\,dt.
+\]
+
+\medskip
+
+\textbf{Future Value.}  
+Once the present value is found, the future value at time $T$ is
+\[
+\text{FV}=\text{PV}\,e^{rT}.
+\]
+
+\medskip
+
+\textbf{Interpretation.}  
+Present value allows us to compare different investments by measuring their worth in today’s dollars.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Demand and supply are given by
+  \[
+  d(q)=60-q,
+  \qquad
+  s(q)=q+10.
+  \]
+  \begin{enumerate}
+    \item Find the equilibrium quantity and price.
+    \workbox[2.2in]{}
+    \item Compute the consumer surplus.
+    \workbox[2.6in]{}
+    \item Compute the producer surplus.
+    \workbox[2.6in]{}
+  \end{enumerate}
+
+  \item A continuous income stream pays \$1000 per year for 5 years.  
+  The interest rate is 6\% per year, compounded continuously.
+  \begin{enumerate}
+    \item Find the present value of the income stream.
+    \workbox[2.8in]{}
+    \item Find the future value at the end of 5 years.
+    \workbox[2.6in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{Applications to Business, Practice Problems.}
+  \begin{enumerate}
+    \item
+    \begin{enumerate}
+      \item $q^*=25,\; p^*=35.$
+      \item $\text{CS}=\dfrac{625}{2}.$
+      \item $\text{PS}=\dfrac{625}{2}.$
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $\text{PV}=\dfrac{1000}{0.06}\left(1-e^{-0.3}\right).$
+      \item $\text{FV}=\dfrac{1000}{0.06}\left(e^{0.3}-1\right).$
+    \end{enumerate}
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Equilibrium occurs where demand equals supply.
+  \item Consumer and producer surplus measure gains from trade.
+  \item Definite integrals compute surplus as areas.
+  \item Continuous income streams are valued using discounted integrals.
+  \item Present value compares investments in today’s dollars.
+\end{itemize}
+
+
+\newpage
+
+\section{Differential Equations}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Understand what a differential equation represents.
+  \item Model real-world situations using differential equations.
+  \item Check whether a given function satisfies a differential equation.
+  \item Solve separable differential equations.
+  \item Apply differential equations to growth models.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Differential Equation.}  
+A differential equation is an equation involving a function and one or more of its derivatives. Differential equations model relationships between quantities and their rates of change.
+
+\medskip
+
+\textbf{Solution of a Differential Equation.}  
+A solution of a differential equation is a function that satisfies the equation when substituted into it.
+
+\medskip
+
+\textbf{Initial Condition.}  
+An initial condition specifies the value of the function at a particular point and allows us to determine a unique solution.
+
+\subsection*{Modeling with Differential Equations}
+
+\textbf{Example 1: Bank Balance Model}
+
+\textbf{Problem.}  
+A bank pays 2\% interest on a certificate of deposit but charges a \$20 annual fee. Write a differential equation for the balance $B(t)$.
+
+\textbf{Solution.}
+
+The balance changes due to:
+\begin{itemize}
+  \item interest earned: $0.02B(t)$ dollars per year,
+  \item fee charged: \$20 per year.
+\end{itemize}
+
+Thus,
+\[
+B'(t)=0.02B(t)-20.
+\]
+
+\textbf{Interpretation.}  
+The rate of change of the balance depends on the current balance and a fixed annual fee.
+
+\subsection*{Checking Solutions of Differential Equations}
+
+\textbf{Example 2: Verifying a Solution}
+
+\textbf{Problem.}  
+Check whether $y=x^2+5$ is a solution of
+\[
+y'+y=x^2+7.
+\]
+
+\textbf{Solution.}
+
+Compute the derivative:
+\[
+y'=2x.
+\]
+
+Substitute into the equation:
+\[
+y'+y=2x+(x^2+5)=x^2+2x+5.
+\]
+
+Since this expression is not equal to $x^2+7$ for all $x$, $y=x^2+5$ is \emph{not} a solution.
+
+\medskip
+
+\textbf{Example 3: Checking Another Solution}
+
+\textbf{Problem.}  
+Check whether $y=x+\dfrac{5}{x}$ satisfies
+\[
+y'+\frac{y}{x}=2.
+\]
+
+\textbf{Solution.}
+
+Compute the derivative:
+\[
+y'=1-\frac{5}{x^2}.
+\]
+
+Substitute:
+\[
+y'+\frac{y}{x}
+=
+\left(1-\frac{5}{x^2}\right)
++\frac{1}{x}\left(x+\frac{5}{x}\right)
+=
+1-\frac{5}{x^2}+1+\frac{5}{x^2}
+=2.
+\]
+
+Thus, $y=x+\dfrac{5}{x}$ is a solution.
+
+\subsection*{Separable Differential Equations}
+
+\textbf{Definition.}  
+A differential equation is separable if it can be written in the form
+\[
+g(y)\,dy=f(x)\,dx.
+\]
+
+\medskip
+
+\textbf{Example 4: Solving a Separable Equation}
+
+\textbf{Problem.}  
+Find the general solution of
+\[
+\frac{dy}{dx}=\frac{6x+1}{2y}.
+\]
+
+\textbf{Solution.}
+
+Rewrite:
+\[
+2y\,dy=(6x+1)\,dx.
+\]
+
+Integrate both sides:
+\[
+\int 2y\,dy=\int(6x+1)\,dx.
+\]
+
+\[
+y^2=3x^2+x+C.
+\]
+
+\subsection*{Models of Growth}
+
+\textbf{Unlimited Growth.}  
+If a quantity grows at a rate proportional to its size, it can be modeled by
+\[
+\frac{dy}{dt}=ry,
+\]
+where $r$ is a constant.
+
+\medskip
+
+\textbf{Example 5: Population Growth}
+
+\textbf{Problem.}  
+A population grows at 8\% per year. If the current population is 5,000, find a formula for the population after $t$ years.
+
+\textbf{Solution.}
+
+\[
+\frac{dy}{dt}=0.08y.
+\]
+
+Separate variables:
+\[
+\frac{1}{y}dy=0.08\,dt.
+\]
+
+Integrate:
+\[
+\ln|y|=0.08t+C.
+\]
+
+Exponentiate:
+\[
+y=Ae^{0.08t}.
+\]
+
+Apply the initial condition $y(0)=5000$:
+\[
+5000=A.
+\]
+
+Thus,
+\[
+y=5000e^{0.08t}.
+\]
+
+\medskip
+
+\textbf{Limited Growth.}  
+If growth slows as a quantity approaches a maximum value $M$, it can be modeled by
+\[
+\frac{dy}{dt}=k(M-y),
+\]
+where $k$ is a constant.
+
+\medskip
+
+\textbf{Logistic Growth.}  
+If growth depends on both the current size and the distance from a maximum value $M$, the model is
+\[
+\frac{dy}{dt}=ry\left(1-\frac{y}{M}\right).
+\]
+
+The solution has the form
+\[
+y=\frac{M}{1+Ae^{-rt}}.
+\]
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Write a differential equation for a bank account that earns 3\% interest per year and charges a \$15 annual fee.
+  \workbox[2.2in]{}
+
+  \item Check whether $y=x^2-4$ is a solution of $y'+y=x^2-2$.
+  \workbox[2.2in]{}
+
+  \item Solve the separable differential equation:
+  \[
+  \frac{dy}{dx}=\frac{4x}{y}.
+  \]
+  \workbox[2.6in]{}
+
+  \item A population grows at a rate proportional to its size with growth rate 5\%. Write the differential equation and general solution.
+  \workbox[2.6in]{}
+
+  \item A population has limited growth with maximum size 10,000 and growth constant $k=0.02$. Write the differential equation.
+  \workbox[2.2in]{}
+
+  \begin{answer}
+  \textbf{Differential Equations, Practice Problems.}
+  \begin{enumerate}
+    \item $B'(t)=0.03B(t)-15.$
+    \item Not a solution.
+    \item $y^2=2x^2+C.$
+    \item $\dfrac{dy}{dt}=0.05y,\quad y=Ae^{0.05t}.$
+    \item $\dfrac{dy}{dt}=0.02(10000-y).$
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Differential equations model relationships involving rates of change.
+  \item Solutions are functions that satisfy the equation.
+  \item Separable equations can be solved by integration.
+  \item Growth models describe population and financial behavior.
+  \item Differential equations connect calculus to real-world dynamics.
+\end{itemize}
+
+
+
+

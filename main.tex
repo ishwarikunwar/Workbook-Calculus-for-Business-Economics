@@ -1,0 +1,116 @@
+% main.tex  (modified)
+
+\documentclass[lang=en,mode=fancy,color=blue,11pt]{elegantbook-custom}
+
+\title{Calculus for Business and Economics}
+\subtitle{Workbook}
+
+\author{Ishwari J. Kunwar}
+\institute{Fort Valley State University, Fort Valley, Georgia}
+\usepackage{comment}
+
+\usepackage{environ}
+
+% Hide the contents of the answer environment
+\NewEnviron{answer}{} 
+
+
+
+% ---------------- Student work boxes (renamed to avoid \answerbox conflict) --------
+% Usage: \workbox[1.2in]{}  (default height = 1.2in)
+\newcommand{\workbox}[2][1.2in]{%
+\begin{tcolorbox}[enhanced, sharp corners,
+  colback=white, colframe=black,
+  boxrule=0.6pt, height=#1, valign=top]
+  #2
+\end{tcolorbox}
+}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+
+\vspace*{2cm}
+
+{\Huge\bfseries\color{structurecolor}
+Calculus for Business and Economics\par}
+
+\vspace{0.6cm}
+
+{\Large\bfseries Workbook\par}
+
+\vspace{2.2cm}
+{\Large\bfseries Samuel Cartwright, Ph.D.\par}
+{\normalsize Professor\par}
+
+
+\vspace{0.6cm}
+
+
+{\Large\bfseries Ishwari  Kunwar, Ph.D.\par}
+{\normalsize Associate Professor\par}
+
+\vspace{0.6cm}
+
+{\Large\bfseries Bhavana Burell\par}
+{\normalsize Lecturer\par}
+
+\vspace{1.8cm}
+
+{\large Fort Valley State University\par}
+
+\vspace{1.5cm}
+
+{\color{structurecolor}\rule{0.7\textwidth}{1pt}}
+
+\vfill
+
+\vfill
+{\large First Edition\par}
+
+
+\end{titlepage}
+
+
+% ---------------- Front Matter ----------------
+\frontmatter
+
+\include{FrontMatter/Copyright}
+\include{FrontMatter/AIDisclosure}
+\include{FrontMatter/Preface}
+\include{FrontMatter/AboutAuthors}
+\include{FrontMatter/Acknowledgments}
+
+\tableofcontents
+
+\mainmatter
+
+
+% ---------------- Main Matter -----------------
+\mainmatter
+
+% IMPORTANT: BibTeX breaks on spaces in file/folder names.
+% Rename your folders/files to remove spaces, then use includes like below:
+%   Chapter 1  -> Chapter1
+%   The Derivative.tex -> TheDerivative.tex
+%   Functions of Two Variables.tex -> FunctionsOfTwoVariables.tex
+%
+% Update these \include paths to match your actual renamed folders/files:
+
+\include{Chapter1/Review}
+\include{Chapter2/TheDerivative}
+\include{Chapter3/TheIntegral}
+\include{Chapter4/FunctionsOfTwoVariables}
+
+% ---------------- Appendices ------------------
+\appendix
+\renewcommand{\thechapter}{\Alph{chapter}}
+
+\include{Appendix/Answers} % This file should contain \printanswers
+
+% ---------------- Back Matter -----------------
+\backmatter
+\include{Bibliography}
+
+\end{document}

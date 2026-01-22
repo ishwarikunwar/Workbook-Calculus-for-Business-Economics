@@ -1,0 +1,2287 @@
+\chapter{The Derivative}
+
+\section{Limits and Continuity}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Evaluate limits of functions algebraically.
+  \item Interpret limits in the context of business and economics.
+  \item Determine whether a function is continuous at a given point.
+  \item Identify and classify types of discontinuities.
+  \item Explain the practical meaning of continuity in business models.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Limit.}  
+The limit of a function $f(x)$ as $x$ approaches a value $a$ is the number that $f(x)$ approaches as $x$ gets close to $a$, provided this value exists.
+\[
+\lim_{x \to a} f(x) = L
+\]
+In business applications, limits are often used to analyze behavior \emph{near} a certain level of output, price, or time, rather than exactly at that value.
+
+\medskip
+
+\textbf{One-Sided Limits.}  
+If a function approaches different values from the left and the right of $a$, we consider one-sided limits:
+\[
+\lim_{x \to a^-} f(x), \qquad \lim_{x \to a^+} f(x)
+\]
+A two-sided limit exists only if these one-sided limits are equal.
+
+\medskip
+
+\textbf{Continuity.}  
+A function $f(x)$ is continuous at $x = a$ if all three of the following conditions are satisfied:
+\begin{enumerate}
+  \item $f(a)$ is defined.
+  \item $\lim_{x \to a} f(x)$ exists.
+  \item $\lim_{x \to a} f(x) = f(a)$.
+\end{enumerate}
+In business models, continuity means that small changes in input produce small changes in output, which is often a realistic assumption for cost, revenue, and profit functions.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Evaluating a Limit Algebraically}
+
+\textbf{Problem.}  
+Suppose the cost (in dollars) of producing $x$ units of a product is given by
+\[
+C(x) = 3x^2 + 5x + 200.
+\]
+Find
+\[
+\lim_{x \to 10} C(x)
+\]
+and interpret the result.
+
+\textbf{Solution.}
+
+Step 1: Recognize that $C(x)$ is a polynomial.  
+Polynomials are continuous for all real values of $x$.
+
+Step 2: Use direct substitution to evaluate the limit.
+\[
+\lim_{x \to 10} C(x) = C(10)
+\]
+
+Step 3: Compute the value.
+\[
+C(10) = 3(10)^2 + 5(10) + 200 = 550
+\]
+
+\textbf{Interpretation.}  
+As production approaches 10 units, the cost approaches \$550. Producing close to 10 units will result in a cost close to \$550.
+
+\medskip
+
+\textbf{Example 2: A Limit That Does Not Exist}
+
+\textbf{Problem.}  
+A company's pricing model is defined by
+\[
+p(x) =
+\begin{cases}
+50, & x < 100, \\
+65, & x \ge 100,
+\end{cases}
+\]
+where $x$ is the number of units ordered. Determine whether
+\[
+\lim_{x \to 100} p(x)
+\]
+exists.
+
+\textbf{Solution.}
+
+Step 1: Evaluate the left-hand limit.
+\[
+\lim_{x \to 100^-} p(x) = 50
+\]
+
+Step 2: Evaluate the right-hand limit.
+\[
+\lim_{x \to 100^+} p(x) = 65
+\]
+
+Step 3: Compare the one-sided limits.  
+Since $50 \neq 65$, the two-sided limit does not exist.
+
+\textbf{Interpretation.}  
+The price jumps at 100 units, indicating a quantity discount threshold. The pricing function is not continuous at $x = 100$.
+
+\medskip
+
+\textbf{Example 3: Continuity at a Point}
+
+\textbf{Problem.}  
+Let profit (in dollars) be given by
+\[
+P(x) =
+\begin{cases}
+4x - 100, & x \le 50, \\
+3x + 50, & x > 50.
+\end{cases}
+\]
+Determine whether $P(x)$ is continuous at $x = 50$.
+
+\textbf{Solution.}
+
+Step 1: Evaluate $P(50)$.
+\[
+P(50) = 4(50) - 100 = 100
+\]
+
+Step 2: Compute the left-hand limit.
+\[
+\lim_{x \to 50^-} P(x) = 100
+\]
+
+Step 3: Compute the right-hand limit.
+\[
+\lim_{x \to 50^+} P(x) = 200
+\]
+
+Step 4: Compare the results.  
+Since the left-hand and right-hand limits are not equal, the limit does not exist.
+
+\textbf{Conclusion.}  
+The profit function is not continuous at $x = 50$, indicating an abrupt change in profit behavior at that production level.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item A revenue function is given by $R(x) = 12x + 80$.
+  \begin{enumerate}
+    \item Evaluate $\displaystyle \lim_{x \to 25} R(x)$.
+    \workbox[1.0in]{}
+    \item Explain the meaning of the result in context.
+    \workbox[1.4in]{}
+  \end{enumerate}
+  \begin{answer}
+  \textbf{Limits and Continuity, Problem 1.}
+  \begin{enumerate}
+      \item $\displaystyle \lim_{x \to 25} R(x) = 380$.
+      \item As output approaches 25 units, revenue approaches \$380, so revenue near 25 units will be close to \$380.
+   \end{enumerate}
+  \end{answer}  
+ \item Consider the function
+  \[
+  C(x) =
+  \begin{cases}
+  500, & x < 40, \\
+  500 + 10(x-40), & x \ge 40.
+  \end{cases}
+  \]
+  \begin{enumerate}
+    \item Find $\displaystyle \lim_{x \to 40^-} C(x)$.
+    \workbox[1.0in]{}
+    \item Find $\displaystyle \lim_{x \to 40^+} C(x)$.
+    \workbox[1.0in]{}
+    \item Determine whether $C(x)$ is continuous at $x=40$. Justify using the definition of continuity.
+    \workbox[2.0in]{}
+  \end{enumerate}
+  \begin{answer}
+  \textbf{Limits and Continuity, Problem 2.}
+  \begin{enumerate}
+    \item $\displaystyle \lim_{x \to 40^-} C(x) = 500$.
+    \item $\displaystyle \lim_{x \to 40^+} C(x) = 500$.
+    \item $C(40)=500$ and $\lim_{x\to 40}C(x)=500$, so $C$ is continuous at $x=40$.
+  \end{enumerate}
+  \end{answer}
+\item A demand function is defined for all $x \neq 60$.
+  \begin{enumerate}
+    \item Explain why $\displaystyle \lim_{x \to 60} f(x)$ may exist even if $f(60)$ is not defined.
+    \workbox[1.6in]{}
+\end{enumerate}
+\begin{answer}
+  \textbf{Limits and Continuity, Problem 3.}
+  A limit depends on the values of the function near the point, not necessarily the value at the point. The limit can exist even if $f(60)$ is undefined.
+\end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Limits describe how a function behaves as the input approaches a particular value.
+  \item A limit may exist even if the function is not defined at that value.
+  \item Continuity requires that the function value and the limit agree at a point.
+  \item Discontinuities often represent abrupt changes in business policies, pricing, or production.
+  \item Understanding limits and continuity is essential for modeling smooth changes in cost, revenue, and profit.
+\end{itemize}
+
+\newpage
+\section{The Derivative}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Explain the derivative as an instantaneous rate of change and as the slope of a tangent line.
+  \item Compute a derivative at a point using the limit definition.
+  \item Interpret derivatives in business and economics contexts (e.g., marginal cost, marginal revenue, marginal profit).
+  \item Approximate derivatives from tables or graphs using nearby average rates of change.
+  \item Determine whether a function is differentiable at a point based on its behavior.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Derivative at a Point.}
+The derivative of a function $f$ at $x=a$ (if it exists) is defined by the limit
+\[
+f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
+\]
+It represents the \emph{instantaneous rate of change} of $f$ with respect to $x$ at $x=a$.
+
+\medskip
+
+\textbf{Geometric Meaning.}
+If $y=f(x)$, then $f'(a)$ is the slope of the line tangent to the graph of $f$ at the point $(a,f(a))$.
+
+\medskip
+
+\textbf{Derivative Function.}
+If the limit exists for each $x$ in an interval, then the derivative function is
+\[
+f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.
+\]
+
+\medskip
+
+\textbf{Notation.}
+If $y=f(x)$, the derivative may be written as
+\[
+f'(x),\qquad y',\qquad \frac{dy}{dx},\qquad \frac{df}{dx}.
+\]
+The notation $\frac{dy}{dx}$ is called \emph{Leibniz notation}; it reminds us the derivative measures how $y$ changes as $x$ changes.
+
+\medskip
+
+\textbf{Differentiable.}
+A function is \emph{differentiable} at $x=a$ if $f'(a)$ exists. Differentiability implies continuity, but a continuous function may fail to be differentiable at a sharp corner, cusp, or vertical tangent.
+
+\medskip
+
+\textbf{Practical Approximation.}
+When $h$ is very small,
+\[
+f'(a)\approx \frac{f(a+h)-f(a)}{h},
+\]
+which is the slope of a secant line over a tiny interval.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Derivative at a Point (Limit Definition)}
+
+\textbf{Problem.}
+Suppose the cost (in dollars) of producing $x$ units is
+\[
+C(x)=0.02x^2+5x+1000.
+\]
+Find $C'(50)$ using the limit definition and interpret the meaning.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Start with the definition:
+\[
+C'(50)=\lim_{h\to 0}\frac{C(50+h)-C(50)}{h}.
+\]
+
+\textbf{Step 2.} Compute $C(50+h)$:
+\[
+C(50+h)=0.02(50+h)^2+5(50+h)+1000.
+\]
+Expand $(50+h)^2=2500+100h+h^2$:
+\[
+C(50+h)=0.02(2500+100h+h^2)+250+5h+1000.
+\]
+\[
+C(50+h)=50+2h+0.02h^2+250+5h+1000
+=1300+7h+0.02h^2.
+\]
+
+\textbf{Step 3.} Compute $C(50)$:
+\[
+C(50)=0.02(2500)+5(50)+1000=50+250+1000=1300.
+\]
+
+\textbf{Step 4.} Form the difference quotient:
+\[
+\frac{C(50+h)-C(50)}{h}
+=\frac{(1300+7h+0.02h^2)-1300}{h}
+=\frac{7h+0.02h^2}{h}
+=7+0.02h.
+\]
+
+\textbf{Step 5.} Take the limit:
+\[
+C'(50)=\lim_{h\to 0}\left(7+0.02h\right)=7.
+\]
+
+\textbf{Interpretation.}
+At $x=50$ units, the cost is increasing at about \$7 per additional unit. In business language, \$7 is the \emph{marginal cost} at 50 units.
+
+\medskip
+
+\textbf{Example 2: Marginal Revenue from a Revenue Model}
+
+\textbf{Problem.}
+Revenue (in dollars) from selling $x$ units is
+\[
+R(x)=200x-0.5x^2.
+\]
+Use the limit definition to find $R'(x)$, then evaluate $R'(100)$ and interpret.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Use the definition:
+\[
+R'(x)=\lim_{h\to 0}\frac{R(x+h)-R(x)}{h}.
+\]
+
+\textbf{Step 2.} Compute $R(x+h)$:
+\[
+R(x+h)=200(x+h)-0.5(x+h)^2
+=200x+200h-0.5(x^2+2xh+h^2).
+\]
+\[
+R(x+h)=200x+200h-0.5x^2-xh-0.5h^2.
+\]
+
+\textbf{Step 3.} Subtract $R(x)=200x-0.5x^2$:
+\[
+R(x+h)-R(x)=\left(200x+200h-0.5x^2-xh-0.5h^2\right)-\left(200x-0.5x^2\right)
+=200h-xh-0.5h^2.
+\]
+
+\textbf{Step 4.} Divide by $h$ and take the limit:
+\[
+\frac{R(x+h)-R(x)}{h}=200-x-0.5h
+\quad\Rightarrow\quad
+R'(x)=\lim_{h\to 0}(200-x-0.5h)=200-x.
+\]
+
+\textbf{Step 5.} Evaluate at $x=100$:
+\[
+R'(100)=200-100=100.
+\]
+
+\textbf{Interpretation.}
+At 100 units, revenue is increasing at about \$100 per additional unit sold. This is the \emph{marginal revenue} at $x=100$.
+
+\medskip
+
+\textbf{Example 3: Approximating a Derivative from a Table}
+
+\textbf{Problem.}
+Let $S(t)$ be the total sales revenue (in thousands of dollars) after $t$ months. The table shows values of $S(t)$:
+
+\[
+\begin{array}{c|ccccc}
+t & 1 & 2 & 3 & 4 & 5\\ \hline
+S(t) & 42 & 47 & 55 & 66 & 80
+\end{array}
+\]
+
+Approximate $S'(3)$ and interpret the result.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Use nearby average rates of change (secant slopes).
+
+Using the interval from $t=2$ to $t=3$:
+\[
+\frac{S(3)-S(2)}{3-2}=\frac{55-47}{1}=8.
+\]
+
+Using the interval from $t=3$ to $t=4$:
+\[
+\frac{S(4)-S(3)}{4-3}=\frac{66-55}{1}=11.
+\]
+
+\textbf{Step 2.} Combine the information.
+A reasonable estimate is to average these two:
+\[
+S'(3)\approx \frac{8+11}{2}=9.5.
+\]
+
+\textbf{Interpretation.}
+At month 3, sales revenue is increasing at about $9.5$ thousand dollars per month (about \$9{,}500 per month).
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Let the cost (in dollars) be $C(x)=0.01x^2+4x+500$.
+  \begin{enumerate}
+    \item Use the limit definition to find $C'(x)$.
+    
+    \workbox[2.0in]{\textit{Hint: Start with }$\displaystyle C'(x)=\lim_{h\to 0}\frac{C(x+h)-C(x)}{h}.$}
+
+    \item Evaluate $C'(80)$.
+    
+    \workbox[1.0in]{}
+
+    \item Interpret $C'(80)$ in context.
+    
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{The Derivative, Problem 1.}
+  \begin{enumerate}
+    \item $C'(x)=0.02x+4$.
+    \item $C'(80)=0.02(80)+4=5.6$.
+    \item At 80 units, cost is increasing at about \$5.60 per additional unit (marginal cost).
+  \end{enumerate}
+  \end{answer}
+
+  \item Revenue is modeled by $R(x)=150x-0.25x^2$ (dollars).
+  \begin{enumerate}
+    \item Find $R'(x)$ using the limit definition.
+    
+    \workbox[2.0in]{\textit{Hint: Expand } $(x+h)^2\textit{ and simplify before dividing by }h.$}
+
+    \item Compute $R'(60)$.
+    
+    \workbox[1.0in]{}
+
+    \item Interpret $R'(60)$ in context.
+    
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{The Derivative, Problem 2.}
+  \begin{enumerate}
+    \item $R'(x)=150-0.5x$.
+    \item $R'(60)=150-30=120$.
+    \item At 60 units, revenue is increasing at about \$120 per additional unit (marginal revenue).
+  \end{enumerate}
+  \end{answer}
+
+  \item Total profit $P(t)$ (in thousands of dollars) after $t$ weeks is estimated by:
+  \[
+  \begin{array}{c|ccccc}
+  t & 2 & 3 & 4 & 5 & 6\\ \hline
+  P(t) & 18 & 22 & 27 & 31 & 34
+  \end{array}
+  \]
+  \begin{enumerate}
+    \item Approximate $P'(4)$ using secant slopes on both sides of $t=4$.
+    
+    \workbox[2.0in]{\textit{Hint: Use }$\frac{P(4)-P(3)}{4-3}\textit{ and }\frac{P(5)-P(4)}{5-4}\textit{, then average.}$}
+
+    \item Interpret your result.
+    
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{The Derivative, Problem 3.}
+  \begin{enumerate}
+    \item Left slope: $(27-22)/1=5$. Right slope: $(31-27)/1=4$. Average: $(5+4)/2=4.5$.
+    \item At week 4, profit is increasing at about \$4.5 thousand per week (about \$4{,}500 per week).
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item The derivative measures an instantaneous rate of change and equals the slope of a tangent line.
+  \item The derivative at $x=a$ is defined by the limit $\displaystyle f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}$.
+  \item Derivatives can be interpreted as marginal quantities in business (marginal cost, marginal revenue, marginal profit).
+  \item When only tables or graphs are available, derivatives can be approximated using nearby average rates of change.
+  \item A function must be differentiable at a point for the derivative to exist there.
+\end{itemize}
+
+
+\newpage
+\section{Power and Sum Rules for Derivatives}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Use the power rule to differentiate polynomial functions.
+  \item Apply the constant multiple rule and sum rule for derivatives.
+  \item Differentiate cost, revenue, and profit functions efficiently.
+  \item Interpret derivatives obtained using rules as marginal quantities.
+  \item Combine differentiation rules to handle realistic business models.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Power Rule.}
+If $f(x)=x^n$, where $n$ is a real number, then the derivative of $f$ is
+\[
+\frac{d}{dx}\left(x^n\right)=nx^{\,n-1}.
+\]
+
+This rule allows derivatives of polynomial terms to be computed quickly without using limits.
+
+\medskip
+
+\textbf{Constant Multiple Rule.}
+If $f(x)$ is differentiable and $c$ is a constant, then
+\[
+\frac{d}{dx}\bigl[c\,f(x)\bigr]=c\,f'(x).
+\]
+
+\medskip
+
+\textbf{Sum and Difference Rules.}
+If $f(x)$ and $g(x)$ are differentiable, then
+\[
+\frac{d}{dx}\bigl[f(x)\pm g(x)\bigr]=f'(x)\pm g'(x).
+\]
+
+\medskip
+
+\textbf{Derivative of a Constant.}
+If $f(x)=c$, where $c$ is a constant, then
+\[
+\frac{d}{dx}(c)=0.
+\]
+
+\medskip
+
+\textbf{Business Interpretation.}
+When cost, revenue, or profit functions are differentiated using these rules, the resulting derivative represents a \emph{marginal} quantity, such as marginal cost or marginal revenue.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Using the Power Rule}
+
+\textbf{Problem.}
+Find the derivative of
+\[
+f(x)=7x^4.
+\]
+
+\textbf{Solution.}
+
+Using the power rule,
+\[
+f'(x)=7(4)x^{3}=28x^3.
+\]
+
+\medskip
+
+\textbf{Example 2: Applying the Sum Rule}
+
+\textbf{Problem.}
+Find the derivative of
+\[
+g(x)=3x^3-5x^2+12x.
+\]
+
+\textbf{Solution.}
+
+Differentiate each term separately:
+\[
+g'(x)=9x^2-10x+12.
+\]
+
+\medskip
+
+\textbf{Example 3: Marginal Cost}
+
+\textbf{Problem.}
+Suppose the cost (in dollars) of producing $x$ units is
+\[
+C(x)=0.01x^3+4x^2+200x+500.
+\]
+Find the marginal cost function and evaluate it at $x=50$.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Differentiate using the power and sum rules:
+\[
+C'(x)=0.03x^2+8x+200.
+\]
+
+\textbf{Step 2.} Evaluate at $x=50$:
+\[
+C'(50)=0.03(2500)+8(50)+200=75+400+200=675.
+\]
+
+\textbf{Interpretation.}
+At 50 units, the cost is increasing at about \$675 per additional unit.
+
+\medskip
+
+\textbf{Example 4: Marginal Profit}
+
+\textbf{Problem.}
+Profit (in dollars) from selling $x$ units is given by
+\[
+P(x)=-0.02x^2+40x-500.
+\]
+Find the marginal profit function.
+
+\textbf{Solution.}
+
+Differentiate term by term:
+\[
+P'(x)=-0.04x+40.
+\]
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Find the derivative of
+  \[
+  f(x)=5x^6.
+  \]
+  \workbox[1.2in]{}
+
+  \item Find the derivative of
+  \[
+  g(x)=4x^3-7x^2+9.
+  \]
+  \workbox[1.4in]{}
+
+  \item The cost (in dollars) of producing $x$ units is
+  \[
+  C(x)=0.02x^3+6x^2+150x+800.
+  \]
+  \begin{enumerate}
+    \item Find the marginal cost function.
+    \workbox[1.6in]{}
+    \item Find the marginal cost when $x=40$.
+    \workbox[1.2in]{}
+  \end{enumerate}
+
+  \item Revenue (in dollars) from selling $x$ units is
+  \[
+  R(x)=120x-0.3x^2.
+  \]
+  \begin{enumerate}
+    \item Find the marginal revenue function.
+    \workbox[1.4in]{}
+    \item Interpret $R'(50)$.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{Power and Sum Rules for Derivatives, Practice Problems.}
+  \begin{enumerate}
+    \item $f'(x)=30x^5$.
+    \item $g'(x)=12x^2-14x$.
+    \item
+    \begin{enumerate}
+      \item $C'(x)=0.06x^2+12x+150$.
+      \item $C'(40)=0.06(1600)+480+150=726$.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $R'(x)=120-0.6x$.
+      \item At 50 units, revenue is decreasing at about \$10 per additional unit.
+    \end{enumerate}
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item The power rule provides a fast method for differentiating powers of $x$.
+  \item Constants differentiate to zero, and constant multiples factor out of derivatives.
+  \item The derivative of a sum or difference is the sum or difference of the derivatives.
+  \item These rules simplify the process of finding marginal cost, revenue, and profit.
+  \item Differentiation rules allow complex business models to be analyzed efficiently.
+\end{itemize}
+
+\newpage
+\section{Product and Quotient Rules}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Use the product rule to differentiate products of functions.
+  \item Use the quotient rule to differentiate ratios of functions.
+  \item Apply product and quotient rules to business-related functions.
+  \item Combine differentiation rules to handle realistic cost, revenue, and profit models.
+  \item Interpret derivatives obtained using these rules as marginal quantities.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Product Rule.}
+If $f(x)$ and $g(x)$ are differentiable functions, then the derivative of their product is
+\[
+\frac{d}{dx}\bigl[f(x)g(x)\bigr]
+= f'(x)g(x)+f(x)g'(x).
+\]
+
+\medskip
+
+\textbf{Quotient Rule.}
+If $f(x)$ and $g(x)$ are differentiable and $g(x)\neq 0$, then
+\[
+\frac{d}{dx}\!\left(\frac{f(x)}{g(x)}\right)
+= \frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}.
+\]
+
+\medskip
+
+\textbf{When to Use These Rules.}
+\begin{itemize}
+  \item Use the product rule when a function is written as a \emph{product} of two functions.
+  \item Use the quotient rule when a function is written as a \emph{ratio} of two functions.
+  \item Do \emph{not} distribute derivatives across products or quotients.
+\end{itemize}
+
+\medskip
+
+\textbf{Business Interpretation.}
+Product and quotient rules often arise when costs, revenues, or profits depend on multiple interacting variables, such as price times quantity or averages per unit.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Using the Product Rule}
+
+\textbf{Problem.}
+Suppose revenue (in dollars) is given by
+\[
+R(x)=(50x)(100-2x),
+\]
+where $x$ is the number of units sold. Find $R'(x)$.
+
+\textbf{Solution.}
+
+Let
+\[
+f(x)=50x, \qquad g(x)=100-2x.
+\]
+
+\textbf{Step 1.} Compute the derivatives:
+\[
+f'(x)=50, \qquad g'(x)=-2.
+\]
+
+\textbf{Step 2.} Apply the product rule:
+\[
+R'(x)=f'(x)g(x)+f(x)g'(x)
+=50(100-2x)+50x(-2).
+\]
+
+\textbf{Step 3.} Simplify:
+\[
+R'(x)=5000-100x-100x=5000-200x.
+\]
+
+\medskip
+
+\textbf{Example 2: Interpreting Marginal Revenue}
+
+\textbf{Problem.}
+Using the result from Example 1, evaluate $R'(20)$ and interpret.
+
+\textbf{Solution.}
+\[
+R'(20)=5000-200(20)=5000-4000=1000.
+\]
+
+\textbf{Interpretation.}
+At 20 units sold, revenue is increasing at about \$1{,}000 per additional unit.
+
+\medskip
+
+\textbf{Example 3: Using the Quotient Rule}
+
+\textbf{Problem.}
+Suppose the average cost (in dollars per unit) of producing $x$ units is
+\[
+A(x)=\frac{0.02x^2+200x+1000}{x}.
+\]
+Find $A'(x)$.
+
+\textbf{Solution.}
+
+Let
+\[
+f(x)=0.02x^2+200x+1000, \qquad g(x)=x.
+\]
+
+\textbf{Step 1.} Compute derivatives:
+\[
+f'(x)=0.04x+200, \qquad g'(x)=1.
+\]
+
+\textbf{Step 2.} Apply the quotient rule:
+\[
+A'(x)=\frac{(0.04x+200)(x)-(0.02x^2+200x+1000)(1)}{x^2}.
+\]
+
+\textbf{Step 3.} Simplify the numerator:
+\[
+A'(x)=\frac{0.04x^2+200x-0.02x^2-200x-1000}{x^2}
+=\frac{0.02x^2-1000}{x^2}.
+\]
+
+\textbf{Example 4: Simplifying Before Differentiation}
+
+\textbf{Problem.}
+Simplify $A(x)$ from Example 3 before differentiating, then find $A'(x)$.
+
+\textbf{Solution.}
+
+First simplify:
+\[
+A(x)=0.02x+200+\frac{1000}{x}.
+\]
+
+Differentiate term by term:
+\[
+A'(x)=0.02-\frac{1000}{x^2}.
+\]
+
+This result matches the simplified form of the quotient rule result.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Find the derivative of
+  \[
+  f(x)=(4x)(x^2+3).
+  \]
+  \workbox[1.6in]{}
+
+  \item Find the derivative of
+  \[
+  g(x)=\frac{6x^2+50x}{x}.
+  \]
+  \workbox[1.6in]{}
+
+  \item Revenue (in dollars) is given by
+  \[
+  R(x)=x(120-3x).
+  \]
+  \begin{enumerate}
+    \item Find $R'(x)$.
+    \workbox[1.6in]{}
+    \item Evaluate $R'(10)$ and interpret the result.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \item The average cost (in dollars per unit) of producing $x$ units is
+  \[
+  A(x)=\frac{0.05x^2+300x+2000}{x}.
+  \]
+  \begin{enumerate}
+    \item Find $A'(x)$.
+    \workbox[1.8in]{}
+    \item Determine whether average cost is increasing or decreasing at $x=50$.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{Product and Quotient Rules, Practice Problems.}
+  \begin{enumerate}
+    \item $f'(x)=4(x^2+3)+4x(2x)=12x^2+12$.
+    \item $g'(x)=\frac{(12x+50)x-(6x^2+50x)}{x^2}=\frac{6x^2}{x^2}=6$.
+    \item
+    \begin{enumerate}
+      \item $R'(x)=120-6x$.
+      \item $R'(10)=60$; revenue is increasing at \$60 per additional unit.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $A'(x)=0.05-\frac{2000}{x^2}$.
+      \item At $x=50$, $A'(50)=0.05-\frac{2000}{2500}=-0.75$, so average cost is decreasing.
+    \end{enumerate}
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item The product rule is used to differentiate products of functions.
+  \item The quotient rule is used to differentiate ratios of functions.
+  \item Simplifying expressions before differentiating can reduce algebraic complexity.
+  \item Product and quotient rules frequently arise in business and economic models.
+  \item Derivatives obtained using these rules often represent marginal or average rates of change.
+\end{itemize}
+
+\newpage
+\section{Chain Rule}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Recognize composite functions.
+  \item Apply the chain rule to differentiate composite functions.
+  \item Differentiate business functions involving powers and nested expressions.
+  \item Combine the chain rule with power, product, and quotient rules.
+  \item Interpret derivatives obtained using the chain rule in business contexts.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Composite Function.}
+A function is called a \emph{composite function} if it can be written in the form
+\[
+y=f(g(x)),
+\]
+where $g(x)$ is an inner function and $f(u)$ is an outer function.
+
+\medskip
+
+\textbf{Chain Rule.}
+If $y=f(g(x))$ and both $f$ and $g$ are differentiable, then
+\[
+\frac{dy}{dx}=f'(g(x))\cdot g'(x).
+\]
+
+\medskip
+
+\textbf{Alternative Notation.}
+If $y=f(u)$ and $u=g(x)$, then
+\[
+\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}.
+\]
+
+\medskip
+
+\textbf{When the Chain Rule Is Needed.}
+The chain rule is used whenever a function involves a power or expression applied to another function, such as
+\[
+(x^2+5x+1)^4 \quad \text{or} \quad \sqrt{3x^2+10}.
+\]
+
+\medskip
+
+\textbf{Business Interpretation.}
+In business and economics, the chain rule allows us to compute marginal changes when one quantity depends on another, which in turn depends on the input variable.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Basic Use of the Chain Rule}
+
+\textbf{Problem.}
+Find the derivative of
+\[
+f(x)=(3x^2+5)^4.
+\]
+
+\textbf{Solution.}
+
+Let $u=3x^2+5$, so that $f(x)=u^4$.
+
+Differentiate:
+\[
+\frac{df}{du}=4u^3, \qquad \frac{du}{dx}=6x.
+\]
+
+Apply the chain rule:
+\[
+f'(x)=4(3x^2+5)^3(6x)=24x(3x^2+5)^3.
+\]
+
+\medskip
+
+\textbf{Example 2: Chain Rule with a Power}
+
+\textbf{Problem.}
+Find the derivative of
+\[
+g(x)=\sqrt{5x^2+20}.
+\]
+
+\textbf{Solution.}
+
+Rewrite the function:
+\[
+g(x)=(5x^2+20)^{1/2}.
+\]
+
+Differentiate using the chain rule:
+\[
+g'(x)=\frac{1}{2}(5x^2+20)^{-1/2}(10x)
+=\frac{5x}{\sqrt{5x^2+20}}.
+\]
+
+\medskip
+
+\textbf{Example 3: Marginal Cost with the Chain Rule}
+
+\textbf{Problem.}
+Suppose the cost (in dollars) of producing $x$ units is
+\[
+C(x)=(0.01x^2+4x+500)^2.
+\]
+Find the marginal cost function.
+
+\textbf{Solution.}
+
+Let $u=0.01x^2+4x+500$, so $C(x)=u^2$.
+
+Differentiate:
+\[
+\frac{dC}{du}=2u, \qquad \frac{du}{dx}=0.02x+4.
+\]
+
+Apply the chain rule:
+\[
+C'(x)=2(0.01x^2+4x+500)(0.02x+4).
+\]
+
+\textbf{Interpretation.}
+The marginal cost depends on both the cost level and how rapidly the cost level is changing.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Find the derivative of
+  \[
+  f(x)=(x^2+3x+1)^5.
+  \]
+  \workbox[1.8in]{}
+
+  \item Find the derivative of
+  \[
+  g(x)=\sqrt{2x^2+10x}.
+  \]
+  \workbox[1.6in]{}
+
+  \item The revenue (in dollars) from selling $x$ units is
+  \[
+  R(x)=(100-2x)^3.
+  \]
+  \begin{enumerate}
+    \item Find $R'(x)$.
+    \workbox[1.8in]{}
+    \item Interpret $R'(20)$.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \item The profit (in dollars) from selling $x$ units is
+  \[
+  P(x)=(x^2+10x+25)^{1/2}.
+  \]
+  \begin{enumerate}
+    \item Find $P'(x)$.
+    \workbox[1.8in]{}
+    \item Determine $P'(25)$.
+    \workbox[1.2in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{Chain Rule, Practice Problems.}
+  \begin{enumerate}
+    \item $f'(x)=5(x^2+3x+1)^4(2x+3)$.
+    \item $g'(x)=\dfrac{2x+5}{\sqrt{2x^2+10x}}$.
+    \item
+    \begin{enumerate}
+      \item $R'(x)=-6(100-2x)^2$.
+      \item $R'(20)=-6(60)^2=-21{,}600$; revenue is decreasing at about \$21{,}600 per additional unit.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $P'(x)=\dfrac{x+5}{\sqrt{x^2+10x+25}}$.
+      \item $P'(25)=\dfrac{30}{\sqrt{900}}=1$.
+    \end{enumerate}
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item The chain rule is used to differentiate composite functions.
+  \item It allows differentiation of powers applied to inner functions.
+  \item The chain rule frequently appears in business models involving nested relationships.
+  \item It is often combined with other differentiation rules.
+  \item Chain rule derivatives often represent marginal changes in complex systems.
+\end{itemize}
+
+
+\newpage
+\section{Second Derivative and Concavity}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Compute second derivatives of functions.
+  \item Interpret the second derivative as a rate of change of a rate of change.
+  \item Determine intervals where a function is concave up or concave down.
+  \item Identify points of inflection using the second derivative.
+  \item Apply concavity concepts to business and economic models.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Second Derivative.}
+If $f(x)$ is a differentiable function and its derivative $f'(x)$ is also differentiable, then the \emph{second derivative} of $f$ is
+\[
+f''(x)=\frac{d}{dx}\bigl[f'(x)\bigr].
+\]
+The second derivative measures how the rate of change of $f$ itself is changing.
+
+\medskip
+
+\textbf{Interpretation.}
+\begin{itemize}
+  \item $f'(x)$ measures the rate of change of $f(x)$.
+  \item $f''(x)$ measures how fast that rate of change is increasing or decreasing.
+\end{itemize}
+
+\medskip
+
+\textbf{Concavity.}
+\begin{itemize}
+  \item A function is \emph{concave up} on an interval if $f''(x) > 0$ on that interval.
+  \item A function is \emph{concave down} on an interval if $f''(x) < 0$ on that interval.
+\end{itemize}
+
+\medskip
+
+\textbf{Point of Inflection.}
+A point $x=c$ is called a \emph{point of inflection} if the concavity of $f(x)$ changes at $x=c$. This typically occurs where $f''(c)=0$ or $f''(c)$ is undefined and concavity changes.
+
+\medskip
+
+\textbf{Business Interpretation.}
+In business and economics:
+\begin{itemize}
+  \item A positive second derivative may indicate increasing marginal cost or accelerating growth.
+  \item A negative second derivative may indicate decreasing marginal profit or slowing growth.
+\end{itemize}
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Computing a Second Derivative}
+
+\textbf{Problem.}
+Let
+\[
+f(x)=2x^3-15x^2+36x+10.
+\]
+Find $f'(x)$ and $f''(x)$.
+
+\textbf{Solution.}
+
+Differentiate once:
+\[
+f'(x)=6x^2-30x+36.
+\]
+
+Differentiate again:
+\[
+f''(x)=12x-30.
+\]
+
+\medskip
+
+\textbf{Example 2: Concavity of a Cost Function}
+
+\textbf{Problem.}
+Suppose the cost (in dollars) of producing $x$ units is
+\[
+C(x)=0.5x^3-6x^2+40x+100.
+\]
+Determine where the cost function is concave up or concave down.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Find the first derivative:
+\[
+C'(x)=1.5x^2-12x+40.
+\]
+
+\textbf{Step 2.} Find the second derivative:
+\[
+C''(x)=3x-12.
+\]
+
+\textbf{Step 3.} Determine where $C''(x)$ is positive or negative.
+
+Set $C''(x)=0$:
+\[
+3x-12=0 \quad \Rightarrow \quad x=4.
+\]
+
+\textbf{Step 4.} Test intervals:
+\begin{itemize}
+  \item For $x<4$, $C''(x)<0$ (concave down).
+  \item For $x>4$, $C''(x)>0$ (concave up).
+\end{itemize}
+
+\medskip
+
+\textbf{Example 3: Point of Inflection}
+
+\textbf{Problem.}
+Let profit (in dollars) be given by
+\[
+P(x)=-x^3+12x^2-36x+20.
+\]
+Find the point of inflection.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Compute the derivatives:
+\[
+P'(x)=-3x^2+24x-36,
+\]
+\[
+P''(x)=-6x+24.
+\]
+
+\textbf{Step 2.} Set the second derivative equal to zero:
+\[
+-6x+24=0 \quad \Rightarrow \quad x=4.
+\]
+
+\textbf{Step 3.} Verify concavity change:
+\begin{itemize}
+  \item For $x<4$, $P''(x)>0$ (concave up).
+  \item For $x>4$, $P''(x)<0$ (concave down).
+\end{itemize}
+
+\textbf{Conclusion.}
+The profit function has a point of inflection at $x=4$.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Find the first and second derivatives of
+  \[
+  f(x)=x^4-8x^3+18x^2.
+  \]
+  \workbox[2.0in]{}
+
+  \item The revenue (in dollars) from selling $x$ units is
+  \[
+  R(x)=3x^3-30x^2+90x.
+  \]
+  \begin{enumerate}
+    \item Find $R'(x)$ and $R''(x)$.
+    \workbox[2.0in]{}
+    \item Determine where the revenue function is concave up or concave down.
+    \workbox[1.6in]{}
+  \end{enumerate}
+
+  \item The cost (in dollars) of producing $x$ units is
+  \[
+  C(x)=0.25x^3-6x^2+48x+200.
+  \]
+  \begin{enumerate}
+    \item Find $C''(x)$.
+    \workbox[1.2in]{}
+    \item Find any point(s) of inflection.
+    \workbox[1.6in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{Second Derivative and Concavity, Practice Problems.}
+  \begin{enumerate}
+    \item $f'(x)=4x^3-24x^2+36x$, \quad $f''(x)=12x^2-48x+36$.
+    \item
+    \begin{enumerate}
+      \item $R'(x)=9x^2-60x+90$, \quad $R''(x)=18x-60$.
+      \item $R''(x)=0$ at $x=\tfrac{10}{3}$. Concave down for $x<\tfrac{10}{3}$, concave up for $x>\tfrac{10}{3}$.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $C''(x)=1.5x-12$.
+      \item $C''(x)=0$ at $x=8$, which is a point of inflection.
+    \end{enumerate}
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item The second derivative measures how a rate of change is itself changing.
+  \item Concavity describes the overall shape of a graph.
+  \item A positive second derivative indicates concave up behavior.
+  \item A negative second derivative indicates concave down behavior.
+  \item Points of inflection occur where concavity changes.
+\end{itemize}
+
+\newpage
+\section{Optimization}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Explain the goal of optimization problems in business and economics.
+  \item Use derivatives to find critical points of a function.
+  \item Apply the first derivative test to identify maximum and minimum values.
+  \item Solve optimization problems involving cost, revenue, and profit.
+  \item Interpret optimal solutions in real-world business contexts.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Optimization.}
+Optimization involves finding the \emph{maximum} or \emph{minimum} value of a function subject to given constraints.
+
+\medskip
+
+\textbf{Critical Point.}
+A critical point of a function $f(x)$ is a value $x=c$ where
+\[
+f'(c)=0 \quad \text{or} \quad f'(c) \text{ is undefined}.
+\]
+
+\medskip
+
+\textbf{Absolute vs.\ Relative Extrema.}
+\begin{itemize}
+  \item A \emph{relative (local) maximum or minimum} occurs near a point.
+  \item An \emph{absolute (global) maximum or minimum} is the highest or lowest value over an entire interval.
+\end{itemize}
+
+\medskip
+
+\textbf{First Derivative Test.}
+If $f'(x)$ changes sign at a critical point $c$:
+\begin{itemize}
+  \item from positive to negative, $f$ has a local maximum at $c$;
+  \item from negative to positive, $f$ has a local minimum at $c$.
+\end{itemize}
+
+\medskip
+
+\textbf{Business Interpretation.}
+Optimization techniques are used to determine optimal production levels, pricing strategies, and resource allocation that maximize profit or minimize cost.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Maximizing Profit}
+
+\textbf{Problem.}
+Suppose profit (in dollars) from selling $x$ units is
+\[
+P(x)=-2x^2+200x-1000.
+\]
+Find the production level that maximizes profit and determine the maximum profit.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Compute the first derivative:
+\[
+P'(x)=-4x+200.
+\]
+
+\textbf{Step 2.} Find critical points by setting $P'(x)=0$:
+\[
+-4x+200=0 \quad \Rightarrow \quad x=50.
+\]
+
+\textbf{Step 3.} Use the first derivative test.
+
+For $x<50$, $P'(x)>0$ (profit increasing).  
+For $x>50$, $P'(x)<0$ (profit decreasing).
+
+\textbf{Conclusion.}
+Profit is maximized at $x=50$ units.
+
+\textbf{Step 4.} Find the maximum profit:
+\[
+P(50)=-2(50)^2+200(50)-1000=4000.
+\]
+
+\medskip
+
+\textbf{Example 2: Minimizing Average Cost}
+
+\textbf{Problem.}
+The average cost (in dollars per unit) of producing $x$ units is
+\[
+A(x)=0.5x+\frac{800}{x}.
+\]
+Find the production level that minimizes average cost.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Compute the derivative:
+\[
+A'(x)=0.5-\frac{800}{x^2}.
+\]
+
+\textbf{Step 2.} Set $A'(x)=0$:
+\[
+0.5-\frac{800}{x^2}=0
+\quad \Rightarrow \quad
+x^2=1600
+\quad \Rightarrow \quad
+x=40.
+\]
+
+\textbf{Step 3.} Interpret.
+Average cost is minimized when 40 units are produced.
+
+\medskip
+
+\textbf{Example 3: Optimization with Constraints}
+
+\textbf{Problem.}
+A company can sell its product for \$60 per unit. The cost of producing $x$ units is
+\[
+C(x)=0.5x^2+20x+500.
+\]
+Find the production level that maximizes profit.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Write the revenue function:
+\[
+R(x)=60x.
+\]
+
+\textbf{Step 2.} Write the profit function:
+\[
+P(x)=R(x)-C(x)=-0.5x^2+40x-500.
+\]
+
+\textbf{Step 3.} Differentiate:
+\[
+P'(x)=-x+40.
+\]
+
+\textbf{Step 4.} Find the critical point:
+\[
+-x+40=0 \quad \Rightarrow \quad x=40.
+\]
+
+\textbf{Conclusion.}
+Profit is maximized when 40 units are produced.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Profit (in dollars) is given by
+  \[
+  P(x)=-x^2+120x-900.
+  \]
+  \begin{enumerate}
+    \item Find the production level that maximizes profit.
+    \workbox[1.4in]{}
+    \item Find the maximum profit.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \item The average cost (in dollars per unit) is
+  \[
+  A(x)=x+\frac{1000}{x}.
+  \]
+  \begin{enumerate}
+    \item Find the value of $x$ that minimizes average cost.
+    \workbox[1.4in]{}
+    \item Interpret the result.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \item Revenue (in dollars) from selling $x$ units is
+  \[
+  R(x)=-3x^2+180x.
+  \]
+  \begin{enumerate}
+    \item Find the value of $x$ that maximizes revenue.
+    \workbox[1.4in]{}
+    \item Find the maximum revenue.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \item A firm produces a product with cost
+  \[
+  C(x)=x^2+40x+600.
+  \]
+  The product sells for \$80 per unit.
+  \begin{enumerate}
+    \item Write the profit function.
+    \workbox[1.6in]{}
+    \item Find the production level that maximizes profit.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{Optimization, Practice Problems.}
+  \begin{enumerate}
+    \item
+    \begin{enumerate}
+      \item $P'(x)=-2x+120=0 \Rightarrow x=60$.
+      \item $P(60)=2700$.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $A'(x)=1-\dfrac{1000}{x^2}=0 \Rightarrow x=\sqrt{1000}\approx31.6$.
+      \item Average cost is minimized at about 32 units.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $R'(x)=-6x+180=0 \Rightarrow x=30$.
+      \item $R(30)=2700$.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $P(x)=80x-(x^2+40x+600)=-x^2+40x-600$.
+      \item $P'(x)=-2x+40=0 \Rightarrow x=20$.
+    \end{enumerate}
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Optimization problems involve finding maximum or minimum values.
+  \item Critical points occur where the derivative is zero or undefined.
+  \item The first derivative test helps classify extrema.
+  \item Optimization is widely used in pricing, production, and cost analysis.
+  \item Calculus provides a systematic approach to decision-making in business.
+\end{itemize}
+
+\newpage
+\section{Curve Sketching}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Identify key features of a function needed for sketching its graph.
+  \item Use first derivatives to determine intervals of increase and decrease.
+  \item Use second derivatives to analyze concavity.
+  \item Identify critical points and points of inflection.
+  \item Sketch graphs of business-related functions using calculus-based analysis.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Curve Sketching.}
+Curve sketching is the process of drawing a graph of a function by analyzing its key characteristics rather than plotting many individual points.
+
+\medskip
+
+\textbf{Critical Points.}
+A critical point occurs at a value $x=c$ where
+\[
+f'(c)=0 \quad \text{or} \quad f'(c) \text{ is undefined}.
+\]
+Critical points are candidates for local maxima or minima.
+
+\medskip
+
+\textbf{Increasing and Decreasing Intervals.}
+\begin{itemize}
+  \item If $f'(x)>0$ on an interval, then $f$ is increasing on that interval.
+  \item If $f'(x)<0$ on an interval, then $f$ is decreasing on that interval.
+\end{itemize}
+
+\medskip
+
+\textbf{Concavity.}
+\begin{itemize}
+  \item If $f''(x)>0$, the graph is concave up.
+  \item If $f''(x)<0$, the graph is concave down.
+\end{itemize}
+
+\medskip
+
+\textbf{Point of Inflection.}
+A point of inflection occurs where the concavity of a function changes, typically where
+\[
+f''(x)=0
+\]
+and the concavity changes sign.
+
+\medskip
+
+\textbf{Business Interpretation.}
+Curve sketching helps visualize how cost, revenue, or profit behaves over time or levels of production, revealing trends such as increasing returns, diminishing returns, or saturation.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Curve Sketching a Profit Function}
+
+\textbf{Problem.}
+Suppose profit (in dollars) is given by
+\[
+P(x)=-x^3+12x^2-36x+20.
+\]
+Use calculus to analyze the graph of $P(x)$.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Compute the first derivative:
+\[
+P'(x)=-3x^2+24x-36.
+\]
+
+\textbf{Step 2.} Find critical points by setting $P'(x)=0$:
+\[
+-3x^2+24x-36=0
+\quad\Rightarrow\quad
+x^2-8x+12=0
+\quad\Rightarrow\quad
+x=2,\;6.
+\]
+
+\textbf{Step 3.} Determine increasing/decreasing intervals.
+
+Test intervals:
+\begin{itemize}
+  \item For $x<2$, $P'(x)<0$ (decreasing).
+  \item For $2<x<6$, $P'(x)>0$ (increasing).
+  \item For $x>6$, $P'(x)<0$ (decreasing).
+\end{itemize}
+
+Thus, $x=2$ is a local minimum and $x=6$ is a local maximum.
+
+\textbf{Step 4.} Compute the second derivative:
+\[
+P''(x)=-6x+24.
+\]
+
+\textbf{Step 5.} Find points of inflection:
+\[
+-6x+24=0 \Rightarrow x=4.
+\]
+
+\textbf{Step 6.} Determine concavity:
+\begin{itemize}
+  \item For $x<4$, $P''(x)>0$ (concave up).
+  \item For $x>4$, $P''(x)<0$ (concave down).
+\end{itemize}
+
+\textbf{Conclusion.}
+The profit function decreases, then increases, then decreases, with a point of inflection at $x=4$.
+
+\medskip
+
+\textbf{Example 2: Curve Sketching a Cost Function}
+
+\textbf{Problem.}
+Let the cost (in dollars) of producing $x$ units be
+\[
+C(x)=0.25x^3-3x^2+12x+100.
+\]
+Analyze the graph of $C(x)$.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} First derivative:
+\[
+C'(x)=0.75x^2-6x+12.
+\]
+
+\textbf{Step 2.} Critical points:
+\[
+0.75x^2-6x+12=0
+\quad\Rightarrow\quad
+x^2-8x+16=0
+\quad\Rightarrow\quad
+x=4.
+\]
+
+\textbf{Step 3.} Second derivative:
+\[
+C''(x)=1.5x-6.
+\]
+
+\textbf{Step 4.} Inflection point:
+\[
+1.5x-6=0 \Rightarrow x=4.
+\]
+
+\textbf{Interpretation.}
+The cost function changes concavity at $x=4$, indicating a change in how marginal cost is increasing.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Let
+  \[
+  f(x)=x^3-9x^2+24x.
+  \]
+  \begin{enumerate}
+    \item Find all critical points.
+    \workbox[1.6in]{}
+    \item Determine intervals of increase and decrease.
+    \workbox[1.8in]{}
+    \item Find any points of inflection.
+    \workbox[1.6in]{}
+  \end{enumerate}
+
+  \item The revenue (in dollars) from selling $x$ units is
+\[
+R(x)=-x^3+15x^2-50x.
+\]
+\begin{enumerate}
+  \item Find all critical points of $R(x)$.
+  \workbox[1.8in]{\textit{Note: Critical points are not necessarily integers.}}
+
+  \item Determine the intervals on which revenue is increasing and decreasing.
+  \workbox[2.0in]{}
+
+  \item Identify the intervals of concavity.
+  \workbox[1.8in]{}
+\end{enumerate}
+
+  \begin{answer}
+\textbf{Curve Sketching, Practice Problems.}
+\begin{enumerate}
+  \item
+  \begin{enumerate}
+    \item $f'(x)=3x^2-18x+24=3(x-2)(x-4)$, so critical points are $x=2$ and $x=4$.
+    \item Increasing on $(2,4)$; decreasing on $(-\infty,2)$ and $(4,\infty)$.
+    \item $f''(x)=6x-18$, so $f''(x)=0$ at $x=3$ (inflection point at $x=3$).
+  \end{enumerate}
+
+  \item
+  \begin{enumerate}
+    \item $R'(x)=-3x^2+30x-50=0 \Rightarrow x=5\pm \dfrac{5\sqrt{3}}{3}$.
+    \item Revenue is increasing on $\left(5-\dfrac{5\sqrt{3}}{3},\,5+\dfrac{5\sqrt{3}}{3}\right)$ and decreasing outside this interval.
+    \item $R''(x)=-6x+30$. Concave up for $x<5$ and concave down for $x>5$.
+  \end{enumerate}
+
+  \item
+  \begin{enumerate}
+    \item $C'(x)=4x^3-12x^2+12x=4x(x-1)(x-3)$, \quad
+          $C''(x)=12x^2-24x+12=12(x-1)^2$.
+    \item Since $C''(x)=12(x-1)^2\ge 0$ for all $x$, $C$ is concave up for all $x$ (no inflection point).
+  \end{enumerate}
+\end{enumerate}
+\end{answer}
+
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Curve sketching uses derivatives to analyze the shape of a graph.
+  \item First derivatives determine increasing and decreasing behavior.
+  \item Second derivatives determine concavity and inflection points.
+  \item Curve sketching provides a visual understanding of business models.
+  \item Calculus-based sketches reveal trends not obvious from formulas alone.
+\end{itemize}
+
+
+\newpage
+\section{Applied Optimization}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Translate real-world business problems into optimization models.
+  \item Identify objective functions and constraints.
+  \item Use derivatives to solve applied optimization problems.
+  \item Interpret optimal solutions in realistic business contexts.
+  \item Distinguish between mathematical solutions and practical feasibility.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Objective Function.}  
+The objective function represents the quantity to be maximized or minimized, such as profit, revenue, cost, or output.
+
+\medskip
+
+\textbf{Constraint.}  
+A constraint is an equation that limits the possible values of the variables in a problem.
+
+\medskip
+
+\textbf{Applied Optimization Process.}
+\begin{enumerate}
+  \item Define variables clearly.
+  \item Write the objective function.
+  \item Use the constraint to express the objective function in one variable.
+  \item Differentiate and find critical points.
+  \item Interpret the solution in the business context.
+\end{enumerate}
+
+\medskip
+
+\textbf{Business Interpretation.}  
+Applied optimization helps firms allocate resources efficiently and make informed strategic decisions.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Maximizing Profit with a Linear Constraint}
+
+\textbf{Problem.}  
+A company sells two products. Product A yields a profit of \$30 per unit and Product B yields a profit of \$20 per unit. The company can produce at most 100 units total. How many units of each product should be produced to maximize profit?
+
+\textbf{Solution.}
+
+Let $x$ be the number of units of Product A.  
+Then $100-x$ units of Product B are produced.
+
+\textbf{Step 1.} Write the profit function:
+\[
+P(x)=30x+20(100-x)=10x+2000.
+\]
+
+\textbf{Step 2.} Analyze the function.
+
+Since $P(x)$ is increasing for all $x$, profit is maximized at the largest feasible value of $x$.
+
+\textbf{Conclusion.}  
+Produce 100 units of Product A and 0 units of Product B.
+
+\medskip
+
+\textbf{Example 2: Minimizing Cost with a Packaging Constraint}
+
+\textbf{Problem.}  
+A company wants to design an open-top rectangular box with a square base that holds 500 cubic inches. Find the dimensions that minimize the amount of material used.
+
+\textbf{Solution.}
+
+Let $x$ be the side length of the square base and $h$ the height.
+
+\textbf{Step 1.} Write the volume constraint:
+\[
+x^2h=500 \quad \Rightarrow \quad h=\frac{500}{x^2}.
+\]
+
+\textbf{Step 2.} Write the surface area function:
+\[
+S=x^2+4xh.
+\]
+
+Substitute for $h$:
+\[
+S(x)=x^2+\frac{2000}{x}.
+\]
+
+\textbf{Step 3.} Differentiate:
+\[
+S'(x)=2x-\frac{2000}{x^2}.
+\]
+
+\textbf{Step 4.} Find the critical point:
+\[
+2x=\frac{2000}{x^2}
+\Rightarrow x^3=1000
+\Rightarrow x=10.
+\]
+
+\textbf{Step 5.} Find the height:
+\[
+h=\frac{500}{10^2}=5.
+\]
+
+\textbf{Conclusion.}  
+The optimal box has base $10\times10$ inches and height 5 inches.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item A company produces two products. Product X yields \$40 profit per unit and Product Y yields \$25 profit per unit. The company can produce at most 120 units total.
+  \begin{enumerate}
+    \item Write the profit function.
+    \workbox[1.8in]{}
+    \item Determine the production plan that maximizes profit.
+    \workbox[1.6in]{}
+  \end{enumerate}
+
+  \item A rectangular storage area is to be built along a straight wall, using fencing on only three sides. The total fencing available is 200 meters.
+  \begin{enumerate}
+    \item Express the area as a function of one variable.
+    \workbox[2.0in]{}
+    \item Find the dimensions that maximize the area.
+    \workbox[1.8in]{}
+  \end{enumerate}
+
+  \item A product has a demand function
+  \[
+  q = 500 - 5p,
+  \]
+  where $p$ is the price (in dollars) and $q$ is the number of units sold.
+  \begin{enumerate}
+    \item Write the revenue function in terms of $p$.
+    \workbox[1.6in]{}
+    \item Find the price that maximizes revenue.
+    \workbox[1.6in]{}
+  \end{enumerate}
+
+  \begin{answer}
+  \textbf{Applied Optimization, Practice Problems.}
+  \begin{enumerate}
+    \item
+    \begin{enumerate}
+      \item Let $x$ be units of Product X. Then
+      \[
+      P(x)=40x+25(120-x)=15x+3000.
+      \]
+      \item Profit is maximized at $x=120$ (all Product X).
+    \end{enumerate}
+
+    \item
+    \begin{enumerate}
+      \item Let $x$ be the width and $y$ the length:
+      \[
+      2x+y=200 \Rightarrow y=200-2x,
+      \quad A(x)=x(200-2x).
+      \]
+      \item $A'(x)=200-4x=0 \Rightarrow x=50,\; y=100$.
+    \end{enumerate}
+
+    \item
+    \begin{enumerate}
+      \item $R(p)=pq=p(500-5p)=500p-5p^2$.
+      \item $R'(p)=500-10p=0 \Rightarrow p=50$.
+    \end{enumerate}
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Applied optimization models real business decisions.
+  \item Constraints reduce problems to single-variable functions.
+  \item Derivatives identify optimal values.
+  \item Interpretation ensures solutions are meaningful in practice.
+  \item Optimization supports efficient use of resources and pricing strategies.
+\end{itemize}
+
+
+
+\newpage
+\section{Other Applications}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Use tangent line approximation to estimate function values.
+  \item Interpret tangent line approximation in business contexts.
+  \item Compute and interpret elasticity of demand.
+  \item Classify demand as elastic, inelastic, or unitary.
+  \item Explain how elasticity affects revenue decisions.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Tangent Line Approximation (TLA).}  
+Tangent line approximation uses the tangent line to a function at a known point to estimate the value of the function at a nearby point.
+
+\medskip
+
+To approximate $f(x)$ using TLA:
+\begin{enumerate}
+  \item Choose a value $a$ such that $a$ is close to $x$.
+  \item The exact values of $f(a)$ and $f'(a)$ are known.
+\end{enumerate}
+
+The tangent line approximation formula is
+\[
+f(x) \approx f(a) + f'(a)(x-a).
+\]
+
+\medskip
+
+Another way to express the same idea is
+\[
+\Delta y \approx f'(a)\Delta x.
+\]
+
+The accuracy of the approximation depends on how close $x$ is to $a$ and on the shape of the graph of $f$.
+
+\medskip
+
+\textbf{Elasticity of Demand.}  
+If a demand function gives quantity $q$ in terms of price $p$, the elasticity of demand is defined by
+\[
+E = \left| \frac{p}{q}\frac{dq}{dp} \right|.
+\]
+
+Since demand typically decreases as price increases, $\frac{dq}{dp}$ is negative. The absolute value ensures elasticity is positive.
+
+\medskip
+
+\textbf{Classification of Demand.}
+\begin{itemize}
+  \item If $E < 1$, demand is \emph{inelastic}.
+  \item If $E > 1$, demand is \emph{elastic}.
+  \item If $E = 1$, demand is \emph{unitary}.
+\end{itemize}
+
+\medskip
+
+\textbf{Interpretation of Elasticity.}  
+If the price increases by 1\%, the demand will decrease by approximately $E$\%.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Tangent Line Approximation}
+
+\textbf{Problem.}  
+Let
+\[
+f(x)=\sqrt{x}.
+\]
+Use tangent line approximation at $x=16$ to estimate $\sqrt{15}$.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Compute $f(16)$ and $f'(x)$.
+\[
+f(16)=4, \quad f'(x)=\frac{1}{2\sqrt{x}}, \quad f'(16)=\frac{1}{8}.
+\]
+
+\textbf{Step 2.} Apply the approximation formula.
+\[
+f(15) \approx f(16) + f'(16)(15-16)
+= 4 - \frac{1}{8}
+= 3.875.
+\]
+
+\textbf{Interpretation.}  
+$\sqrt{15}$ is approximately $3.875$.
+
+\medskip
+
+\textbf{Example 2: Computing Elasticity of Demand}
+
+\textbf{Problem.}  
+Suppose the demand function is
+\[
+q = 200 - 4p.
+\]
+Find the elasticity of demand when $p=20$ and classify the demand.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Compute $\dfrac{dq}{dp}$.
+\[
+\frac{dq}{dp} = -4.
+\]
+
+\textbf{Step 2.} Evaluate $q$ at $p=20$.
+\[
+q = 200 - 4(20) = 120.
+\]
+
+\textbf{Step 3.} Compute elasticity.
+\[
+E = \left| \frac{20}{120}(-4) \right| = \frac{2}{3}.
+\]
+
+\textbf{Conclusion.}  
+Since $E<1$, demand is inelastic. Increasing price will increase revenue.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Use tangent line approximation to estimate $\sqrt{24}$ using $a=25$.
+  \workbox[2.0in]{}
+
+  \item A demand function is given by
+  \[
+  q = 300 - 6p.
+  \]
+  \begin{enumerate}
+    \item Find the elasticity of demand.
+    \workbox[1.8in]{}
+    \item Evaluate elasticity at $p=30$.
+    \workbox[1.6in]{}
+    \item Classify the demand.
+    \workbox[1.4in]{}
+  \end{enumerate}
+
+  \item Explain what it means if demand is unitary.
+  \workbox[1.6in]{}
+
+  \begin{answer}
+  \textbf{Other Applications, Practice Problems.}
+  \begin{enumerate}
+    \item $\sqrt{24}\approx 5 + \frac{1}{10}(24-25)=4.9$.
+    \item
+    \begin{enumerate}
+      \item $E=\left|\dfrac{p}{q}\dfrac{dq}{dp}\right|$ with $\dfrac{dq}{dp}=-6$.
+      \item At $p=30$, $q=120$ so $E=\left|\dfrac{30}{120}(-6)\right|=1.5$.
+      \item Demand is elastic.
+    \end{enumerate}
+    \item When demand is unitary, a price change does not change total revenue.
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Tangent line approximation estimates function values near known points.
+  \item The derivative provides the linear rate of change.
+  \item Elasticity measures responsiveness of demand to price changes.
+  \item Elasticity guides pricing and revenue decisions.
+  \item Calculus connects mathematical models to real business behavior.
+\end{itemize}
+
+
+\newpage
+\section{Implicit Differentiation and Related Rates}
+
+\subsection*{Learning Objectives}
+After completing this section, you should be able to:
+\begin{itemize}
+  \item Differentiate equations defined implicitly.
+  \item Solve for $\dfrac{dy}{dx}$ using implicit differentiation.
+  \item Apply related rates to business and applied problems.
+  \item Interpret rates of change in context.
+  \item Translate word problems into mathematical relationships.
+\end{itemize}
+
+\subsection*{Key Definitions and Concepts}
+
+\textbf{Implicit Differentiation.}  
+Implicit differentiation is used when a function is not explicitly solved for one variable in terms of another. Instead of rewriting the equation, both sides are differentiated with respect to $x$.
+
+\medskip
+
+When differentiating terms involving $y$, the chain rule is applied:
+\[
+\frac{d}{dx}(y^n)=n y^{\,n-1}\frac{dy}{dx}.
+\]
+
+\medskip
+
+\textbf{Related Rates.}  
+Related rates problems involve finding the rate of change of one quantity by relating it to other changing quantities using derivatives.
+
+\medskip
+
+\textbf{General Strategy for Related Rates.}
+\begin{enumerate}
+  \item Write an equation relating the variables.
+  \item Differentiate both sides with respect to time.
+  \item Substitute known values.
+  \item Solve for the desired rate.
+\end{enumerate}
+
+\medskip
+
+\textbf{Business Interpretation.}  
+Related rates help model how changes in production, revenue, cost, or resources affect one another over time.
+
+\subsection*{Solved Examples}
+
+\textbf{Example 1: Implicit Differentiation}
+
+\textbf{Problem.}  
+Differentiate the equation
+\[
+x^2 + xy + y^2 = 25
+\]
+with respect to $x$.
+
+\textbf{Solution.}
+
+Differentiate both sides with respect to $x$:
+\[
+2x + (x\,\frac{dy}{dx} + y) + 2y\frac{dy}{dx} = 0.
+\]
+
+Group terms involving $\dfrac{dy}{dx}$:
+\[
+(x + 2y)\frac{dy}{dx} = -(2x + y).
+\]
+
+Solve for $\dfrac{dy}{dx}$:
+\[
+\frac{dy}{dx} = -\frac{2x + y}{x + 2y}.
+\]
+
+\medskip
+
+\textbf{Example 2: Related Rates in Production}
+
+\textbf{Problem.}  
+A company produces square metal sheets. Let $x$ be the length of a side (in meters) and $A$ the area (in square meters). If the side length is increasing at a rate of $0.5$ m/min, find the rate at which the area is increasing when $x=10$.
+
+\textbf{Solution.}
+
+\textbf{Step 1.} Write the equation:
+\[
+A=x^2.
+\]
+
+\textbf{Step 2.} Differentiate with respect to time $t$:
+\[
+\frac{dA}{dt}=2x\frac{dx}{dt}.
+\]
+
+\textbf{Step 3.} Substitute values:
+\[
+\frac{dA}{dt}=2(10)(0.5)=10.
+\]
+
+\textbf{Conclusion.}  
+The area is increasing at $10$ m$^2$/min.
+
+\medskip
+
+\textbf{Example 3: Related Rates in Revenue}
+
+\textbf{Problem.}  
+Revenue is given by
+\[
+R=pq,
+\]
+where $p$ is price and $q$ is quantity sold. Suppose price is decreasing at \$2 per unit per month and sales volume is increasing at 50 units per month. Find the rate of change of revenue when $p=40$ and $q=500$.
+
+\textbf{Solution.}
+
+Differentiate with respect to time:
+\[
+\frac{dR}{dt}=p\frac{dq}{dt}+q\frac{dp}{dt}.
+\]
+
+Substitute values:
+\[
+\frac{dR}{dt}=40(50)+500(-2)=2000-1000=1000.
+\]
+
+\textbf{Interpretation.}  
+Revenue is increasing at \$1{,}000 per month.
+
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+  \item Use implicit differentiation to find $\dfrac{dy}{dx}$:
+  \[
+  x^2 + y^2 + 4xy = 16.
+  \]
+  \workbox[2.2in]{}
+
+  \item Suppose the area of a rectangular warehouse is
+  \[
+  A=lw,
+  \]
+  where $l$ and $w$ are changing over time. If $l$ is increasing at 3 m/month and $w$ is decreasing at 1 m/month, find $\dfrac{dA}{dt}$ when $l=20$ and $w=10$.
+  \workbox[2.2in]{}
+
+  \item A company’s inventory value is given by
+  \[
+  V=pq.
+  \]
+  If price is increasing at \$1 per unit per month and quantity is decreasing at 30 units per month, find $\dfrac{dV}{dt}$ when $p=25$ and $q=400$.
+  \workbox[2.2in]{}
+
+  \begin{answer}
+  \textbf{Implicit Differentiation and Related Rates, Practice Problems.}
+  \begin{enumerate}
+    \item $\dfrac{dy}{dx}=-\dfrac{x+2y}{y+2x}$.
+    \item $\dfrac{dA}{dt}=20(-1)+10(3)=10$ m$^2$/month.
+    \item $\dfrac{dV}{dt}=25(-30)+400(1)=-350$ dollars per month.
+  \end{enumerate}
+  \end{answer}
+\end{enumerate}
+
+\subsection*{Section Summary}
+
+\begin{itemize}
+  \item Implicit differentiation is used when variables are interdependent.
+  \item The chain rule accounts for variables changing with respect to another.
+  \item Related rates problems involve differentiating with respect to time.
+  \item Business applications include production, revenue, and inventory changes.
+  \item Calculus connects multiple changing quantities in real-world systems.
+\end{itemize}
+
